@@ -1,0 +1,81 @@
+@mixin tablet-screen {
+  @media screen and (min-width: 768px) and (max-width: 1279px) {
+    @content;
+  }
+}
+
+@mixin desktop-screen {
+  @media screen and (min-width: 1280px) {
+    @content;
+  }
+}
+
+@mixin page-header-mobile {
+  font-family: "avenir";
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 700;
+}
+
+@mixin page-header-tablet-desktop {
+  font-family: "avenir";
+  font-size: 33px;
+  line-height: 44px;
+  font-weight: 700;
+}
+
+@mixin section-header-mobile {
+  font-family: "avenir";
+  font-size: 12px;
+  line-height: 20px;
+  font-weight: 700;
+}
+
+@mixin section-header-tablet-desktop {
+  font-family: "avenir";
+  font-size: 12px;
+  line-height: 20px;
+  font-weight: 700;
+}
+
+@mixin subheader-mobile {
+  font-family: "avenir";
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 700;
+}
+
+@mixin subheader-tablet-desktop {
+  font-family: "avenir";
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 700;
+}
+
+@mixin body-mobile {
+  font-family: "avenir";
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 400;
+}
+
+@mixin body-tablet-desktop {
+  font-family: "avenir";
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 400;
+}
+
+@mixin lables-button-mobile {
+  font-family: "avenir";
+  font-size: 12px;
+  line-height: 20px;
+  font-weight: 700;
+}
+
+@mixin lables-button-tablet-desktop {
+  font-family: "avenir";
+  font-size: 12px;
+  line-height: 20px;
+  font-weight: 700;
+}

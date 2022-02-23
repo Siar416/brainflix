@@ -13,21 +13,23 @@ function Header() {
       </a>
 
       {/* below is the search field section/form */}
-      <form className="header__searchbar">
-        <input
-          className="header__searchbar-img"
-          src={search}
-          type="image"
-          alt="image of search bar"
-        />
-        <input
-          className="header__searchbar-bar"
-          placeholder="Search"
-          name="search"
-        />
-      </form>
+      <section class="header__container">
+        <form className="header__searchbar">
+          <input
+            className="header__searchbar-img"
+            src={search}
+            type="image"
+            alt="image of search bar"
+          />
+          <input
+            className="header__searchbar-bar"
+            placeholder="Search"
+            name="search"
+          />
+        </form>
+        <article className="header__btn-avatar"></article>
+      </section>
 
-      {/* below is the upload button section */}
       <section className="header__btn">
         <button className="header__btn-upload">
           <img
@@ -37,13 +39,6 @@ function Header() {
           />
           UPLOAD
         </button>
-
-        {/* below is avatar image */}
-        {/* <img
-          className="header__btn-avatar"
-          // src={avatar}
-          alt="image of avatar"
-        /> */}
       </section>
     </section>
   );

@@ -39,11 +39,11 @@ function Header() {
         </button>
 
         {/* below is avatar image */}
-        <img
+        {/* <img
           className="header__btn-avatar"
-          src={avatar}
+          // src={avatar}
           alt="image of avatar"
-        />
+        /> */}
       </section>
     </section>
   );

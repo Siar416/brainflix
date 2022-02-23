@@ -1,12 +1,71 @@
 @use "../../styles/partials/colors" as *;
+@use "../../styles/partials/mixins" as *;
 
 // mobile section
 .header {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   background-color: $white;
   max-height: 200px;
   padding: 16px 0;
-  border: 3px solid green;
+  margin: 0 16px;
+
+  &__logo {
+    margin-bottom: 16px;
+    align-self: center;
+  }
+
+  &__searchbar {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    border-radius: 4px;
+    width: 80vw;
+    height: 48px;
+    border: 1px solid $mercury;
+
+    &-img {
+      margin: 0 16px;
+      width: 22px;
+    }
+
+    &-bar {
+      @include body-mobile;
+      height: 40px;
+      width: inherit;
+      border: none;
+
+      &:focus {
+        outline-width: 0;
+      }
+    }
+  }
+
+  &__btn {
+    padding: 16px 0;
+
+    &-upload {
+      @include body-mobile;
+      color: $white;
+      background-color: $brainflix-blue;
+      width: 95vw;
+      height: 55px;
+      border: none;
+      border-radius: 4px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-start;
+
+      &:hover {
+        background-color: $brainflix-dark-blue;
+      }
+
+      &-img {
+        margin-right: 45%;
+        height: 30px;
+      }
+    }
+  }
 }

@@ -1,0 +1,73 @@
+// Check to see if I need all these - just pasted it from Header component
+@use "../../styles/partials/reset" as *;
+@use "../../styles/partials/colors" as *;
+@use "../../styles/partials/mixins" as *;
+
+.comments {
+  font-family: avenir;
+  padding: 0 16px;
+
+  &__header {
+    @include subheader-mobile;
+    padding-bottom: 16px;
+  }
+
+  &__form {
+    border-bottom: 1px solid $mercury;
+    display: flex;
+    justify-content: space-between;
+
+    &__img {
+      height: 40px;
+      width: 40px;
+      border-radius: 50%;
+    }
+  }
+
+  &__textarea {
+    height: 100px;
+    width: 75vw;
+    outline: none;
+    border: 1px solid $mercury;
+    margin-top: 5px;
+    position: relative;
+    margin-bottom: 16px;
+
+    &::placeholder {
+      //   text-align: start;
+      line-height: 70px;
+      position: absolute;
+      top: 10px;
+      left: 16px;
+      @include section-header-mobile;
+      color: $brainflix-dark-black;
+    }
+  }
+
+  &__input-field-txt {
+    color: $silver;
+  }
+
+  &__btn {
+    @include body-mobile;
+
+    &-submit {
+      @include body-mobile;
+      color: $white;
+      background-color: $brainflix-blue;
+      width: 76vw;
+      height: 55px;
+      border: none;
+      border-radius: 4px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-start;
+      padding-left: 16px;
+
+      &-img {
+        margin-right: 25vw;
+      }
+    }
+  }
+}

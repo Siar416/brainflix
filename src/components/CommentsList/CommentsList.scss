@@ -1,0 +1,65 @@
+@use "../../styles/partials/reset" as *;
+@use "../../styles/partials/colors" as *;
+@use "../../styles/partials/mixins" as *;
+
+// .comments {
+//   @include subheader-mobile;
+//   padding: 16px;
+//   border-bottom: 1px solid $mercury;
+
+//   &__wrapper {
+//     display: flex;
+//     // width: 100%;
+//     align-items: center;
+//     margin-bottom: 16px;
+
+//     &__avatar {
+//       background-color: $mercury;
+//       height: 40px;
+//       width: 40px;
+//       border-radius: 50%;
+//       display: inline-block;
+//       margin-right: 16px;
+//     }
+//     &__date {
+//       margin-left: auto;
+//       color: $silver;
+//     }
+//   }
+
+//   &__comment {
+//     @include body-mobile;
+//     padding: 0 0 0 3.5rem;
+//   }
+// }
+
+.comments__list {
+  @include subheader-mobile;
+  padding: 16px;
+  border-bottom: 1px solid $mercury;
+
+  &__comment {
+    @include body-mobile;
+    padding: 0 0 0 3.5rem;
+  }
+}
+
+.comments__wrapper {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+
+  &__avatar {
+    background-color: $mercury;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 16px;
+  }
+
+  &__date {
+    margin-left: auto;
+    color: $silver;
+  }
+}

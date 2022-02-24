@@ -1,0 +1,46 @@
+// Check to see if I need all these - just pasted it from Header component
+@use "../../styles/partials/reset" as *;
+@use "../../styles/partials/colors" as *;
+@use "../../styles/partials/mixins" as *;
+
+.hero {
+  position: relative;
+
+  &__img {
+    height: auto;
+    width: 100%;
+  }
+
+  &__mediaBtn {
+    width: 100%;
+    position: absolute;
+    top: -15px;
+    left: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 16px;
+
+    &__right {
+      margin-right: 36px;
+      display: flex;
+      width: 100px;
+      justify-content: space-around;
+      background-color: rgba($brainflix-dark-black, 0.5);
+      border-radius: 8px;
+    }
+
+    &__play {
+      width: 20px;
+      background-color: rgba($brainflix-dark-black, 0.5);
+    }
+
+    &__fullscreen {
+      width: 25px;
+    }
+
+    &__volumeUp {
+      width: 25px;
+    }
+  }
+}

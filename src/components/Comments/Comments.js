@@ -1,5 +1,4 @@
 import avatar from "../../assets/images/Mohan-muruge.jpg";
-import comments from "../../data/video-details.json";
 import plusSign from "../../assets/icons/add_comment.svg";
 import "./Comments.scss";
 

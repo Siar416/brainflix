@@ -12,7 +12,7 @@
   }
 
   &__mediaBtn {
-    width: 100%;
+    width: 95%;
     position: absolute;
     top: -15px;
     left: 0;
@@ -22,7 +22,7 @@
     margin: 0 16px;
 
     &__right {
-      margin-right: 36px;
+      // margin-right: 36px;
       display: flex;
       width: 100px;
       justify-content: space-around;

@@ -1,7 +1,7 @@
 import comments from "../../data/video-details.json";
 import "./CommentsList.scss";
 
-console.log(comments[0]);
+// console.log(comments[0]);
 let data = comments[0].comments;
 
 function CommentsList() {

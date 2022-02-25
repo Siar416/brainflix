@@ -38,6 +38,7 @@ function Header() {
           />
           UPLOAD
         </button>
+        <article className="header__btn-avatar header__btn-avatar--hidden"></article>
       </section>
     </section>
   );

@@ -44,3 +44,26 @@
     }
   }
 }
+
+// tablet styling
+@include tablet-screen {
+  .hero {
+    &__img {
+      padding: 0 30px;
+      background-color: $brainflix-dark-black;
+    }
+
+    &__mediaBtn {
+      top: -25px;
+      width: 92%;
+      justify-content: space-between;
+
+      &__play {
+        margin-left: 30px;
+      }
+      &__right {
+        height: 35px;
+      }
+    }
+  }
+}

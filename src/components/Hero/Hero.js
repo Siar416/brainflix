@@ -7,10 +7,11 @@ import volumeUp from "../../assets/icons/volume_up.svg";
 function Hero() {
   return (
     <hero className="hero">
-      <img
+      <video
         className="hero__img"
-        src={HeroVideo[0].image}
-        alt={HeroVideo[0].title}
+        // src={HeroVideo[0].image}
+        poster={HeroVideo[0].image}
+        // alt={HeroVideo[0].title}
       />
       <section className="hero__mediaBtn">
         <img className="hero__mediaBtn__play" src={play} alt="" />

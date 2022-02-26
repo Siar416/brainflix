@@ -24,7 +24,8 @@ class App extends React.Component {
     return (
       <section>
         <Header />
-        <Hero videos={this.state.videos} />
+        {/* <Hero videos={this.state.videos} /> */}
+        <Hero currentVideo={this.state.currentVideo} />
         <section className="flex__wrapper">
           <div className="flex__wrapper-left">
             <About />

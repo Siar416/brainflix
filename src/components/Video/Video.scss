@@ -7,20 +7,20 @@
 
 .videos__item {
   display: flex;
-  margin-bottom: 16px;
+  margin-bottom: 1rem;
 
   &__img {
-    width: 120px;
-    height: 80px;
+    width: 7.5rem;
+    height: 5rem;
     display: inline-block;
-    border-radius: 4px;
+    border-radius: 0.25rem;
     flex-shrink: 0;
   }
 }
 
 .videos__wrapper {
   // display: flex;
-  margin-left: 16px;
+  margin-left: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;

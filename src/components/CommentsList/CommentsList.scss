@@ -4,10 +4,10 @@
 
 .comments__list {
   @include subheader-mobile;
-  padding: 16px 0;
-  margin: 0 16px;
+  padding: 1rem 0;
+  margin: 0 1rem;
 
-  border-bottom: 1px solid $mercury;
+  border-bottom: 0.0625rem solid $mercury;
 
   &__comment {
     @include body-mobile;
@@ -26,11 +26,11 @@
 
   &__avatar {
     background-color: $mercury;
-    height: 40px;
-    width: 40px;
+    height: 2.5rem;
+    width: 2.5rem;
     border-radius: 50%;
     display: inline-block;
-    margin-right: 16px;
+    margin-right: 1rem;
   }
 
   &__date {
@@ -45,8 +45,8 @@
     @include subheader-tablet-desktop;
   }
   .comments__list {
-    padding: 24px 0;
-    margin: 0 36px;
+    padding: 1.5rem 0;
+    margin: 0 2.25rem;
 
     &__comment {
       @include body-tablet-desktop;
@@ -60,8 +60,8 @@
     @include subheader-tablet-desktop;
   }
   .comments__list {
-    padding: 24px 0;
-    margin: 0 180px;
+    padding: 1.5rem 0;
+    margin: 0 11.25rem;
 
     &__comment {
       @include body-tablet-desktop;

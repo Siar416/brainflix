@@ -4,14 +4,14 @@
 @use "../../styles/partials/mixins" as *;
 
 .about {
-  padding: 24px 16px 16px 16px;
+  padding: 1.5rem 1rem 1rem 1rem;
 
   &__container {
     display: flex;
     justify-content: space-between;
-    border-top: 1px solid $mercury;
-    border-bottom: 1px solid $mercury;
-    margin-top: 16px;
+    border-top: 0.0625rem solid $mercury;
+    border-bottom: 0.0625rem solid $mercury;
+    margin-top: 1rem;
   }
 
   &__title {
@@ -48,7 +48,7 @@
     flex-wrap: wrap;
     max-width: 24vw;
     @include subheader-mobile;
-    margin-right: 50px;
+    margin-right: 3.125rem;
     justify-content: space-around;
     align-items: flex-start;
 
@@ -58,8 +58,8 @@
     }
 
     &__views-img {
-      width: 25px;
-      margin-right: 10px;
+      width: 1.5625rem;
+      margin-right: 0.625rem;
 
       &-txt {
         color: $silver;
@@ -68,8 +68,8 @@
     }
 
     &__likes-img {
-      width: 25px;
-      margin-right: 10px;
+      width: 1.5625rem;
+      margin-right: 0.625rem;
 
       &-txt {
         color: $silver;
@@ -80,7 +80,7 @@
 
   &__description {
     @include body-mobile;
-    padding: 16px 0;
+    padding: 1rem 0;
   }
 }
 
@@ -88,7 +88,7 @@
 
 @include tablet-screen {
   .about {
-    padding: 36px;
+    padding: 2.25rem;
 
     &__title {
       @include page-header-tablet-desktop;
@@ -107,7 +107,7 @@
 
       &__timestamp {
         @include subheader-tablet-desktop;
-        margin-left: 20px;
+        margin-left: 1.25rem;
       }
 
       &__author {
@@ -120,7 +120,7 @@
       margin-right: 0;
 
       &__views-img-txt {
-        margin-right: 20px;
+        margin-right: 1.25rem;
       }
     }
 
@@ -134,7 +134,7 @@
 @include desktop-screen {
   .about {
     // padding: 36px 180px;
-    padding: 36px 0 36px 180px;
+    padding: 2.25rem 0 2.25rem 11.25rem;
 
     &__title {
       @include page-header-tablet-desktop;
@@ -145,7 +145,7 @@
       border-top: none;
       margin-top: 0;
       align-items: center;
-      height: 50px;
+      height: 3.125rem;
     }
 
     &__info {
@@ -155,7 +155,7 @@
 
       &__timestamp {
         @include subheader-tablet-desktop;
-        margin-left: 36px;
+        margin-left: 2.25rem;
       }
 
       &__author {
@@ -170,17 +170,17 @@
       flex-direction: row;
 
       &__likes-img-txt {
-        margin-right: 16px;
+        margin-right: 1rem;
       }
 
       &__views-img-txt {
-        margin-right: 20px;
+        margin-right: 1.25rem;
       }
     }
 
     &__description {
       @include body-tablet-desktop;
-      padding-right: 16px;
+      padding-right: 1rem;
     }
   }
 }

@@ -5,22 +5,22 @@
 
 .comments {
   font-family: avenir;
-  padding: 0 16px;
+  padding: 0 1rem;
 
   &__header {
     @include subheader-mobile;
-    padding-bottom: 16px;
+    padding-bottom: 1rem;
   }
 
   &__form {
-    border-bottom: 1px solid $mercury;
+    border-bottom: 0.0625rem solid $mercury;
     display: flex;
     justify-content: space-between;
-    padding-bottom: 16px;
+    padding-bottom: 1rem;
 
     &__img {
-      height: 40px;
-      width: 40px;
+      height: 2.5rem;
+      width: 2.5rem;
       border-radius: 50%;
     }
   }
@@ -29,16 +29,16 @@
     height: 100px;
     width: 98%;
     outline: none;
-    border: 1px solid $mercury;
-    margin-top: 5px;
+    border: 0.0625rem solid $mercury;
+    margin-top: 0.3125rem;
     position: relative;
-    margin-bottom: 16px;
+    margin-bottom: 1rem;
 
     &::placeholder {
-      line-height: 70px;
+      line-height: 4.375rem;
       position: absolute;
-      top: 10px;
-      left: 16px;
+      top: 0.625rem;
+      left: 1rem;
       @include section-header-mobile;
       color: $brainflix-dark-black;
     }
@@ -47,7 +47,7 @@
   &__input-field {
     display: flex;
     flex-direction: column;
-    margin-left: 16px;
+    margin-left: 1rem;
 
     &-txt {
       @include subheader-mobile;
@@ -63,14 +63,14 @@
       color: $white;
       background-color: $brainflix-blue;
       width: 72vw;
-      height: 40px;
+      height: 2.5rem;
       border: none;
-      border-radius: 4px;
+      border-radius: 0.25rem;
       display: flex;
       flex-direction: row;
       align-items: center;
       justify-content: flex-start;
-      padding-left: 16px;
+      padding-left: 1rem;
 
       &:hover {
         background-color: $brainflix-dark-blue;
@@ -86,14 +86,14 @@
 // styling for tablet
 @include tablet-screen {
   .comments {
-    padding: 0 36px;
+    padding: 0 2.25rem;
 
     &__form {
       align-items: center;
       justify-content: flex-start;
 
       &__img {
-        margin-right: 16px;
+        margin-right: 1rem;
       }
     }
 
@@ -110,18 +110,18 @@
     }
 
     &__textarea {
-      border-radius: 4px;
-      height: 40px;
+      border-radius: 0.25rem;
+      height: 2.5rem;
       width: 63vw;
-      margin-right: 16px;
+      margin-right: 1rem;
     }
 
     &__btn-submit {
       width: 18vw;
-      height: 40px;
+      height: 2.5rem;
 
       &-img {
-        margin-right: 25px;
+        margin-right: 1.5625rem;
       }
     }
   }
@@ -131,14 +131,14 @@
 @include desktop-screen {
   .comments {
     // padding: 0 180px;
-    padding: 0 0 0 180px;
+    padding: 0 0 0 11.25rem;
 
     &__form {
       align-items: center;
       justify-content: space-between;
 
       &__img {
-        margin-right: 16px;
+        margin-right: 1rem;
       }
     }
 
@@ -154,19 +154,19 @@
     }
 
     &__textarea {
-      border-radius: 4px;
-      height: 40px;
+      border-radius: 0.25rem;
+      height: 2.5rem;
       width: 40vw;
-      margin-right: 16px;
+      margin-right: 1rem;
     }
 
     &__btn-submit {
       width: 10vw;
-      height: 40px;
-      margin-right: 16px;
+      height: 2.5rem;
+      margin-right: 1rem;
 
       &-img {
-        margin-right: 25px;
+        margin-right: 1.5625rem;
       }
     }
   }

@@ -3,19 +3,19 @@
 @use "../../styles/partials/mixins" as *;
 
 .videos__container {
-  padding: 16px;
+  padding: 1rem;
 }
 
 .videos__header {
   @include subheader-mobile;
   color: $silver;
-  margin-bottom: 16px;
+  margin-bottom: 1rem;
 }
 
 .videos {
   display: flex;
   flex-direction: column;
-  padding-bottom: 16px;
+  padding-bottom: 1rem;
 
   // &__title {
   //   @include subheader-mobile;
@@ -41,6 +41,6 @@
 // styling for tablet
 @include tablet-screen {
   .videos__container {
-    padding: 24px 36px;
+    padding: 1.5rem 2.25rem;
   }
 }

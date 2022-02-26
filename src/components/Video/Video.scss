@@ -1,0 +1,58 @@
+@use "../../styles/partials/reset" as *;
+@use "../../styles/partials/colors" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/reset" as *;
+@use "../../styles/partials/colors" as *;
+@use "../../styles/partials/mixins" as *;
+
+.videos__item {
+  display: flex;
+  margin-bottom: 16px;
+
+  &__img {
+    width: 120px;
+    height: 80px;
+    display: inline-block;
+    border-radius: 4px;
+    flex-shrink: 0;
+  }
+}
+
+.videos__wrapper {
+  // display: flex;
+  margin-left: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &__title {
+    @include subheader-mobile;
+    padding: 0;
+  }
+
+  &__channel {
+    @include subheader-mobile;
+  }
+}
+
+// &__img {
+//   width: 120px;
+//   height: 80px;
+//   display: inline-block;
+//   border-radius: 4px;
+//   flex-shrink: 0;
+//   margin-bottom: 16px;
+// }
+
+// &__wrapper {
+//   display: flex;
+//   margin-left: 16px;
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: space-between;
+// }
+
+// .test {
+//   display: flex;
+//   margin-bottom: 16px;
+// }

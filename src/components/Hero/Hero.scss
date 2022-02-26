@@ -10,39 +10,6 @@
     height: auto;
     width: 100%;
   }
-
-  &__mediaBtn {
-    width: 95%;
-    position: absolute;
-    top: -15px;
-    left: 0;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin: 0 16px;
-
-    &__right {
-      // margin-right: 36px;
-      display: flex;
-      width: 100px;
-      justify-content: space-around;
-      background-color: rgba($brainflix-dark-black, 0.5);
-      border-radius: 8px;
-    }
-
-    &__play {
-      width: 20px;
-      background-color: rgba($brainflix-dark-black, 0.5);
-    }
-
-    &__fullscreen {
-      width: 25px;
-    }
-
-    &__volumeUp {
-      width: 25px;
-    }
-  }
 }
 
 // tablet styling
@@ -51,19 +18,6 @@
     &__img {
       padding: 0 36px;
       background-color: $brainflix-dark-black;
-    }
-
-    &__mediaBtn {
-      top: -25px;
-      width: 92%;
-      justify-content: space-between;
-
-      &__play {
-        margin-left: 30px;
-      }
-      &__right {
-        height: 35px;
-      }
     }
   }
 }
@@ -74,19 +28,6 @@
     &__img {
       padding: 0 180px;
       background-color: $brainflix-dark-black;
-    }
-
-    &__mediaBtn {
-      top: -25px;
-      justify-content: space-around;
-      display: flex;
-
-      &__play {
-        margin-left: 30px;
-      }
-      &__right {
-        height: 35px;
-      }
     }
   }
 }

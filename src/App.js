@@ -8,17 +8,23 @@ import CommentsList from "./components/CommentsList/CommentsList";
 import VideosArray from "./components/VideosArray/VideosArray";
 
 //import state below from json file
-import VideosJSON from "./data/videos.json";
+import videos from "./data/video-details.json";
 
 class App extends React.Component {
-  state = { vidoes: VideosJSON };
+  state = { videos: videos, currentVideo: videos[0] };
+
+  handleVideoChange = (id) => {
+    const newVideoId = this.state.videos.findIndex((video) => id === video.id);
+    this.setState({
+      currentVideo: this.state.videos[newVideoId],
+    });
+  };
 
   render() {
-    // console.log(this.state);
     return (
       <section>
         <Header />
-        <Hero />
+        <Hero videos={this.state.videos} />
         <section className="flex__wrapper">
           <div className="flex__wrapper-left">
             <About />
@@ -28,7 +34,12 @@ class App extends React.Component {
             </div>
           </div>
           <section className="flex__wrapper-right">
-            <VideosArray data={this.state.vidoes} />
+            {/* <VideosArray data={this.state.videos} /> */}
+            <VideosArray
+              videos={this.state.videos}
+              currentVideo={this.state.currentVideo}
+              handleVideoChange={this.handleVideoChange}
+            />
           </section>
         </section>
       </section>

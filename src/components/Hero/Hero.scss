@@ -49,7 +49,7 @@
 @include tablet-screen {
   .hero {
     &__img {
-      padding: 0 30px;
+      padding: 0 36px;
       background-color: $brainflix-dark-black;
     }
 
@@ -57,6 +57,29 @@
       top: -25px;
       width: 92%;
       justify-content: space-between;
+
+      &__play {
+        margin-left: 30px;
+      }
+      &__right {
+        height: 35px;
+      }
+    }
+  }
+}
+
+//Destop styling
+@include desktop-screen {
+  .hero {
+    &__img {
+      padding: 0 180px;
+      background-color: $brainflix-dark-black;
+    }
+
+    &__mediaBtn {
+      top: -25px;
+      justify-content: space-around;
+      display: flex;
 
       &__play {
         margin-left: 30px;

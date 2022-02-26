@@ -35,7 +35,6 @@
     margin-bottom: 16px;
 
     &::placeholder {
-      //   text-align: start;
       line-height: 70px;
       position: absolute;
       top: 10px;
@@ -47,6 +46,7 @@
 
   &__input-field-txt {
     color: $silver;
+    @include subheader-mobile;
   }
 
   &__btn {
@@ -57,7 +57,7 @@
       color: $white;
       background-color: $brainflix-blue;
       width: 76vw;
-      height: 55px;
+      height: 40px;
       border: none;
       border-radius: 4px;
       display: flex;
@@ -68,6 +68,91 @@
 
       &-img {
         margin-right: 25vw;
+      }
+    }
+  }
+}
+
+// styling for tablet
+@include tablet-screen {
+  .comments {
+    padding: 0 36px;
+
+    &__form {
+      align-items: center;
+
+      &__img {
+        margin-right: 16px;
+      }
+    }
+
+    &__input-field {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      width: 85vw;
+    }
+
+    &__header {
+      @include subheader-tablet-desktop;
+    }
+
+    &__textarea {
+      border-radius: 4px;
+      height: 40px;
+      width: 63vw;
+      margin-right: 16px;
+    }
+
+    &__btn-submit {
+      width: 18vw;
+      height: 40px;
+
+      &-img {
+        margin-right: 25px;
+      }
+    }
+  }
+}
+
+// desktop styling
+@include desktop-screen {
+  .comments {
+    padding: 0 180px;
+
+    &__form {
+      align-items: center;
+      justify-content: flex-start;
+
+      &__img {
+        margin-right: 16px;
+      }
+    }
+
+    &__input-field {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      // width: 85vw;
+    }
+
+    &__header {
+      @include subheader-tablet-desktop;
+    }
+
+    &__textarea {
+      border-radius: 4px;
+      height: 40px;
+      width: 40vw;
+      margin-right: 16px;
+    }
+
+    &__btn-submit {
+      width: 10vw;
+      height: 40px;
+
+      &-img {
+        margin-right: 25px;
       }
     }
   }

@@ -3,11 +3,6 @@
 @use "../../styles/partials/colors" as *;
 @use "../../styles/partials/mixins" as *;
 
-// .about__wrapper {
-//   display: flex;
-//   justify-content: space-between;
-// }
-
 .about {
   padding: 24px 16px 16px 16px;
 
@@ -27,9 +22,14 @@
   &__info {
     display: flex;
     justify-content: space-around;
+    align-items: center;
     flex-direction: column;
     height: 100px;
-    width: 50%;
+    // width: 50%;
+
+    @include tablet-screen {
+      flex-direction: row;
+    }
 
     &__timestamp {
       @include subheader-mobile;
@@ -43,25 +43,36 @@
 
   &__stats {
     display: flex;
+    flex-direction: column;
     align-items: center;
     flex-wrap: wrap;
     max-width: 24vw;
     @include subheader-mobile;
-    width: 50%;
+    margin-right: 50px;
+    justify-content: space-around;
+
+    @include tablet-screen {
+      flex-direction: row;
+      flex-wrap: nowrap;
+    }
 
     &__views-img {
-      width: 40px;
+      width: 25px;
+      margin-right: 10px;
 
       &-txt {
         color: $silver;
+        display: flex;
       }
     }
 
     &__likes-img {
-      width: 40px;
+      width: 25px;
+      margin-right: 10px;
 
       &-txt {
         color: $silver;
+        display: flex;
       }
     }
   }
@@ -69,5 +80,100 @@
   &__description {
     @include body-mobile;
     padding: 16px 0;
+  }
+}
+
+// tablet styling
+
+@include tablet-screen {
+  .about {
+    padding: 36px;
+
+    &__title {
+      @include page-header-tablet-desktop;
+    }
+
+    &__container {
+      @include subheader-tablet-desktop;
+      border-top: none;
+      margin-top: 0;
+      height: 8vw;
+      align-items: center;
+    }
+
+    &__info {
+      height: 0;
+
+      &__timestamp {
+        @include subheader-tablet-desktop;
+        margin-left: 20px;
+      }
+
+      &__author {
+        @include subheader-tablet-desktop;
+      }
+    }
+
+    &__stats {
+      @include subheader-tablet-desktop;
+      margin-right: 0;
+
+      &__views-img-txt {
+        margin-right: 20px;
+      }
+    }
+
+    &__description {
+      @include body-tablet-desktop;
+    }
+  }
+}
+
+// styling for desktop
+@include desktop-screen {
+  .about {
+    padding: 36px 180px;
+
+    &__title {
+      @include page-header-tablet-desktop;
+    }
+
+    &__container {
+      @include subheader-tablet-desktop;
+      border-top: none;
+      margin-top: 0;
+      align-items: center;
+      height: 50px;
+    }
+
+    &__info {
+      height: 0;
+      display: flex;
+      flex-direction: row;
+
+      &__timestamp {
+        @include subheader-tablet-desktop;
+        margin-left: 36px;
+      }
+
+      &__author {
+        @include subheader-tablet-desktop;
+      }
+    }
+
+    &__stats {
+      @include subheader-tablet-desktop;
+      margin-right: 0;
+      display: flex;
+      flex-direction: row;
+
+      &__views-img-txt {
+        margin-right: 20px;
+      }
+    }
+
+    &__description {
+      @include body-tablet-desktop;
+    }
   }
 }

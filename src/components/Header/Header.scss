@@ -96,6 +96,7 @@
 // tablet styling
 @include tablet-screen {
   .header {
+    padding: 36px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -125,6 +126,43 @@
     &__searchbar {
       width: 35vw;
       margin: 0 auto;
+    }
+  }
+}
+
+// Desktop styling
+@include desktop-screen {
+  .header {
+    padding: 36px 180px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 80px;
+
+    &__logo {
+      margin-bottom: 0;
+    }
+
+    &__btn-avatar {
+      display: none;
+
+      &--hidden {
+        display: flex;
+      }
+    }
+
+    &__btn-upload {
+      width: 15vw;
+      justify-content: flex-start;
+
+      &-img {
+        margin-right: 50px;
+      }
+    }
+    &__searchbar {
+      width: 20vw;
+      margin-left: auto;
+      margin-right: 36px;
     }
   }
 }

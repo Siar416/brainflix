@@ -19,10 +19,18 @@ class App extends React.Component {
       <section>
         <Header />
         <Hero />
-        <About />
-        <Comments />
-        <CommentsList />
-        <VideosArray data={this.state.vidoes} />
+        <section className="flex__wrapper">
+          <div className="flex__wrapper-left">
+            <About />
+            <Comments />
+            <div>
+              <CommentsList />
+            </div>
+          </div>
+          <section className="flex__wrapper-right">
+            <VideosArray data={this.state.vidoes} />
+          </section>
+        </section>
       </section>
     );
   }

@@ -2,3 +2,14 @@
 @use "./styles/partials/mixins" as *;
 @use "./styles/partials/fonts" as *;
 @use "./styles/partials/colors" as *;
+
+@include desktop-screen {
+  .flex__wrapper {
+    display: flex;
+
+    &-left {
+      width: 80vw;
+      border-right: 1px solid $mercury;
+    }
+  }
+}

@@ -133,7 +133,8 @@
 // styling for desktop
 @include desktop-screen {
   .about {
-    padding: 36px 180px;
+    // padding: 36px 180px;
+    padding: 36px 0 36px 180px;
 
     &__title {
       @include page-header-tablet-desktop;
@@ -168,6 +169,10 @@
       display: flex;
       flex-direction: row;
 
+      &__likes-img-txt {
+        margin-right: 16px;
+      }
+
       &__views-img-txt {
         margin-right: 20px;
       }
@@ -175,6 +180,7 @@
 
     &__description {
       @include body-tablet-desktop;
+      padding-right: 16px;
     }
   }
 }

@@ -27,7 +27,7 @@
 
   &__textarea {
     height: 100px;
-    width: 75vw;
+    width: 98%;
     outline: none;
     border: 1px solid $mercury;
     margin-top: 5px;
@@ -44,9 +44,15 @@
     }
   }
 
-  &__input-field-txt {
-    color: $silver;
-    @include subheader-mobile;
+  &__input-field {
+    display: flex;
+    flex-direction: column;
+    margin-left: 16px;
+
+    &-txt {
+      @include subheader-mobile;
+      color: $silver;
+    }
   }
 
   &__btn {
@@ -56,7 +62,7 @@
       @include body-mobile;
       color: $white;
       background-color: $brainflix-blue;
-      width: 76vw;
+      width: 72vw;
       height: 40px;
       border: none;
       border-radius: 4px;
@@ -65,6 +71,10 @@
       align-items: center;
       justify-content: flex-start;
       padding-left: 16px;
+
+      &:hover {
+        background-color: $brainflix-dark-blue;
+      }
 
       &-img {
         margin-right: 25vw;
@@ -80,6 +90,7 @@
 
     &__form {
       align-items: center;
+      justify-content: flex-start;
 
       &__img {
         margin-right: 16px;
@@ -88,9 +99,10 @@
 
     &__input-field {
       display: flex;
-      justify-content: flex-end;
+      flex-direction: row;
+      justify-content: flex-start;
       align-items: center;
-      width: 85vw;
+      // width: 85vw;
     }
 
     &__header {
@@ -118,7 +130,8 @@
 // desktop styling
 @include desktop-screen {
   .comments {
-    padding: 0 180px;
+    // padding: 0 180px;
+    padding: 0 0 0 180px;
 
     &__form {
       align-items: center;
@@ -131,7 +144,7 @@
 
     &__input-field {
       display: flex;
-      justify-content: flex-end;
+      flex-direction: row;
       align-items: center;
       // width: 85vw;
     }
@@ -150,6 +163,7 @@
     &__btn-submit {
       width: 10vw;
       height: 40px;
+      margin-right: 16px;
 
       &-img {
         margin-right: 25px;

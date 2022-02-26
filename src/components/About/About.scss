@@ -50,6 +50,7 @@
     @include subheader-mobile;
     margin-right: 50px;
     justify-content: space-around;
+    align-items: flex-start;
 
     @include tablet-screen {
       flex-direction: row;

@@ -1,0 +1,19 @@
+@use "../../styles/partials/reset" as *;
+@use "../../styles/partials/colors" as *;
+@use "../../styles/partials/mixins" as *;
+
+.videos {
+  display: flex;
+  padding: 16px;
+  &__img {
+    width: 135px;
+    height: 80px;
+    display: inline-block;
+    border-radius: 4px;
+    flex-shrink: 0;
+  }
+
+  &__wrapper {
+    margin-left: 16px;
+  }
+}

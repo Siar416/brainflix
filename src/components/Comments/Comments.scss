@@ -26,7 +26,7 @@
   }
 
   &__textarea {
-    height: 100px;
+    height: 6.25rem;
     width: 98%;
     outline: none;
     border: 0.0625rem solid $mercury;
@@ -90,7 +90,7 @@
 
     &__form {
       align-items: center;
-      justify-content: flex-start;
+      // justify-content: flex-start;
 
       &__img {
         margin-right: 1rem;

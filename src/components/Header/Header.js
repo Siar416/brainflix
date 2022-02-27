@@ -6,12 +6,10 @@ import "./Header.scss";
 function Header() {
   return (
     <section className="header">
-      {/* below is the logo */}
-      <a className="header__logo" href="#">
+      <a className="header__logo" href="index.html">
         <img src={logo} alt="brainflex logo" />
       </a>
 
-      {/* below is the search field section/form */}
       <section class="header__container">
         <form className="header__searchbar">
           <input

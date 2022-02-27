@@ -10,6 +10,7 @@
     height: auto;
     width: 100%;
     background-size: cover;
+    background-color: $brainflix-dark-black;
   }
 }
 
@@ -18,7 +19,6 @@
   .hero {
     &__img {
       padding: 0 2.25rem;
-      background-color: $brainflix-dark-black;
     }
   }
 }
@@ -28,7 +28,6 @@
   .hero {
     &__img {
       padding: 0 11.25rem;
-      background-color: $brainflix-dark-black;
     }
   }
 }

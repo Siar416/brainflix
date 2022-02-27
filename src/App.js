@@ -24,18 +24,16 @@ class App extends React.Component {
     return (
       <section>
         <Header />
-        {/* <Hero videos={this.state.videos} /> */}
         <Hero currentVideo={this.state.currentVideo} />
         <section className="flex__wrapper">
           <div className="flex__wrapper-left">
-            <About />
-            <Comments />
+            <About currentVideo={this.state.currentVideo} />
+            <Comments currentVideo={this.state.currentVideo} />
             <div>
-              <CommentsList />
+              <CommentsList currentVideo={this.state.currentVideo} />
             </div>
           </div>
           <section className="flex__wrapper-right">
-            {/* <VideosArray data={this.state.videos} /> */}
             <VideosArray
               videos={this.state.videos}
               currentVideo={this.state.currentVideo}
@@ -49,17 +47,3 @@ class App extends React.Component {
 }
 
 export default App;
-
-// function App() {
-//   return (
-//     <section>
-//       <Header />
-//       <Hero />
-//       <About />
-//       <Comments />
-//       <CommentsList />
-//     </section>
-//   );
-// }
-
-// export default App;

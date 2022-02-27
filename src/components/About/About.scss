@@ -4,6 +4,7 @@
 @use "../../styles/partials/mixins" as *;
 
 .about {
+  background-color: &white;
   padding: 1.5rem 1rem 1rem 1rem;
 
   &__container {
@@ -25,11 +26,6 @@
     align-items: center;
     flex-direction: column;
     height: 6.25rem;
-    // width: 50%;
-
-    @include tablet-screen {
-      flex-direction: row;
-    }
 
     &__timestamp {
       @include subheader-mobile;
@@ -51,11 +47,6 @@
     margin-right: 3.125rem;
     justify-content: space-around;
     align-items: flex-start;
-
-    @include tablet-screen {
-      flex-direction: row;
-      flex-wrap: nowrap;
-    }
 
     &__views-img {
       width: 1.5625rem;
@@ -85,7 +76,6 @@
 }
 
 // tablet styling
-
 @include tablet-screen {
   .about {
     padding: 2.25rem;
@@ -104,6 +94,7 @@
 
     &__info {
       height: 0;
+      flex-direction: row;
 
       &__timestamp {
         @include subheader-tablet-desktop;
@@ -118,6 +109,8 @@
     &__stats {
       @include subheader-tablet-desktop;
       margin-right: 0;
+      flex-direction: row;
+      flex-wrap: nowrap;
 
       &__views-img-txt {
         margin-right: 1.25rem;
@@ -133,7 +126,6 @@
 // styling for desktop
 @include desktop-screen {
   .about {
-    // padding: 36px 180px;
     padding: 2.25rem 0 2.25rem 11.25rem;
 
     &__title {

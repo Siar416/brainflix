@@ -5,19 +5,6 @@ function VideosArray({ videos, currentVideo, handleVideoChange }) {
   // console.log(videos);
 
   return (
-    // <section class="videos__container">
-    //   <h2 className="vidoes__header">NEXT VIDEOS</h2>
-    //   {videos.map((item) => (
-    //     <section className="videos">
-    //       {<img className="videos__img" src={item.image} />}
-    //       <section className="videos__wrapper">
-    //         <h1 className="videos__title">{item.title}</h1>
-    //         <h1 className="videos__channel">{item.channel}</h1>
-    //       </section>
-    //     </section>
-    //   ))}
-    // </section>
-
     <section className="videos__container">
       <h2 className="videos__header">NEXT VIDEOS</h2>
       <ul className="videos">

@@ -6,6 +6,7 @@
 .comments {
   font-family: avenir;
   padding: 0 1rem;
+  background-color: $white;
 
   &__header {
     @include subheader-mobile;
@@ -33,6 +34,7 @@
     margin-top: 0.3125rem;
     position: relative;
     margin-bottom: 1rem;
+    background-color: $alabaster;
 
     &::placeholder {
       line-height: 4.375rem;
@@ -44,14 +46,19 @@
     }
   }
 
-  &__input-field {
-    display: flex;
-    flex-direction: column;
-    margin-left: 1rem;
+  &__input {
+    margin: 0 auto;
+    width: 100%;
 
-    &-txt {
-      @include subheader-mobile;
-      color: $silver;
+    &-field {
+      display: flex;
+      flex-direction: column;
+      margin-left: 1rem;
+
+      &-txt {
+        @include subheader-mobile;
+        color: $silver;
+      }
     }
   }
 
@@ -61,8 +68,8 @@
     &-submit {
       @include body-mobile;
       color: $white;
+      width: 100%;
       background-color: $brainflix-blue;
-      width: 72vw;
       height: 2.5rem;
       border: none;
       border-radius: 0.25rem;
@@ -90,7 +97,6 @@
 
     &__form {
       align-items: center;
-      // justify-content: flex-start;
 
       &__img {
         margin-right: 1rem;
@@ -100,9 +106,8 @@
     &__input-field {
       display: flex;
       flex-direction: row;
-      justify-content: flex-start;
+      justify-content: space-between;
       align-items: center;
-      // width: 85vw;
     }
 
     &__header {
@@ -117,8 +122,9 @@
     }
 
     &__btn-submit {
-      width: 18vw;
+      // width: 18vw;
       height: 2.5rem;
+      margin-right: 1rem;
 
       &-img {
         margin-right: 1.5625rem;
@@ -130,12 +136,12 @@
 // desktop styling
 @include desktop-screen {
   .comments {
-    // padding: 0 180px;
     padding: 0 0 0 11.25rem;
 
     &__form {
       align-items: center;
       justify-content: space-between;
+      border-bottom: none;
 
       &__img {
         margin-right: 1rem;
@@ -146,7 +152,8 @@
       display: flex;
       flex-direction: row;
       align-items: center;
-      // width: 85vw;
+      justify-content: space-between;
+      margin-right: 2.25rem;
     }
 
     &__header {
@@ -161,7 +168,7 @@
     }
 
     &__btn-submit {
-      width: 10vw;
+      // width: 10vw;
       height: 2.5rem;
       margin-right: 1rem;
 

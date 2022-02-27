@@ -4,9 +4,9 @@
 
 .comments__list {
   @include subheader-mobile;
+  background-color: $white;
   padding: 1rem 0;
   margin: 0 1rem;
-
   border-bottom: 0.0625rem solid $mercury;
 
   &__comment {
@@ -18,7 +18,6 @@
 .comments__wrapper {
   display: flex;
   align-items: center;
-  // margin-bottom: 16px;
 
   &__name {
     @include subheader-tablet-desktop;
@@ -60,8 +59,10 @@
     @include subheader-tablet-desktop;
   }
   .comments__list {
-    padding: 1.5rem 0;
-    margin: 0 11.25rem;
+    padding: 24px 1.5rem 0;
+    margin: 24px 0 24px 11.25rem;
+    border-bottom: none;
+    border-top: 0.0625rem solid $mercury;
 
     &__comment {
       @include body-tablet-desktop;

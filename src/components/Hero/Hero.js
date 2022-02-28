@@ -1,4 +1,3 @@
-import HeroVideo from "../../data/videos.json";
 import "./Hero.scss";
 
 function Hero({ currentVideo }) {

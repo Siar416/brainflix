@@ -18,6 +18,7 @@
   &__title {
     @include page-header-mobile;
     width: 100%;
+    color: $brainflix-black;
   }
 
   &__info {
@@ -34,6 +35,7 @@
 
     &__author {
       @include subheader-mobile;
+      color: $brainflix-black;
     }
   }
 
@@ -72,6 +74,7 @@
   &__description {
     @include body-mobile;
     padding: 1rem 0;
+    color: $brainflix-black;
   }
 }
 

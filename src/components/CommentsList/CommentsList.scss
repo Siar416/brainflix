@@ -12,6 +12,7 @@
   &__comment {
     @include body-mobile;
     padding: 0 0 0 3.5rem;
+    color: $brainflix-black;
   }
 }
 
@@ -21,6 +22,7 @@
 
   &__name {
     @include subheader-tablet-desktop;
+    color: $brainflix-black;
   }
 
   &__avatar {
@@ -59,8 +61,8 @@
     @include subheader-tablet-desktop;
   }
   .comments__list {
-    padding: 24px 1.5rem 0;
-    margin: 24px 0 24px 11.25rem;
+    padding: 1.5rem 1.5rem 0;
+    margin: 1.5rem 0 1.5rem 11.25rem;
     border-bottom: none;
     border-top: 0.0625rem solid $mercury;
 

@@ -12,70 +12,70 @@
 
 @mixin page-header-mobile {
   font-family: "myAvenir";
-  font-size: 24px;
-  line-height: 32px;
+  font-size: 1.5rem;
+  line-height: 2rem;
   font-weight: 700;
 }
 
 @mixin page-header-tablet-desktop {
   font-family: "myAvenir";
-  font-size: 33px;
-  line-height: 44px;
+  font-size: 2.0625rem;
+  line-height: 2.75rem;
   font-weight: 700;
 }
 
 @mixin section-header-mobile {
   font-family: "myAvenir";
-  font-size: 12px;
-  line-height: 20px;
+  font-size: 0.75rem;
+  line-height: 1.25rem;
   font-weight: 700;
 }
 
 @mixin section-header-tablet-desktop {
   font-family: "myAvenir";
-  font-size: 12px;
-  line-height: 20px;
+  font-size: 0.75rem;
+  line-height: 1.25rem;
   font-weight: 700;
 }
 
 @mixin subheader-mobile {
   font-family: "myAvenir";
-  font-size: 13px;
-  line-height: 18px;
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
   font-weight: 700;
 }
 
 @mixin subheader-tablet-desktop {
   font-family: "myAvenir";
-  font-size: 14px;
-  line-height: 22px;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
   font-weight: 700;
 }
 
 @mixin body-mobile {
   font-family: "myAvenir";
-  font-size: 13px;
-  line-height: 18px;
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
   font-weight: 400;
 }
 
 @mixin body-tablet-desktop {
   font-family: "myAvenir";
-  font-size: 14px;
-  line-height: 22px;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
   font-weight: 400;
 }
 
 @mixin lables-button-mobile {
   font-family: "myAvenir";
-  font-size: 12px;
-  line-height: 20px;
+  font-size: 0.75rem;
+  line-height: 1.25rem;
   font-weight: 700;
 }
 
 @mixin lables-button-tablet-desktop {
   font-family: "myAvenir";
-  font-size: 12px;
-  line-height: 20px;
+  font-size: 0.75rem;
+  line-height: 1.25rem;
   font-weight: 700;
 }

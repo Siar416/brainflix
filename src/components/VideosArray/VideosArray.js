@@ -2,8 +2,6 @@ import "./VideosArray.scss";
 import Video from "../Video/Video";
 
 function VideosArray({ videos, currentVideo, handleVideoChange }) {
-  // console.log(videos);
-
   return (
     <section className="videos__container">
       <h2 className="videos__header">NEXT VIDEOS</h2>

@@ -1,11 +1,14 @@
 import React from "react";
 import "./App.scss";
 import Header from "./components/Header/Header";
-import Hero from "./components/Hero/Hero";
-import About from "./components/About/About";
-import Comments from "./components/Comments/Comments";
-import CommentsList from "./components/CommentsList/CommentsList";
-import VideosArray from "./components/VideosArray/VideosArray";
+// moved to Home component
+// import Hero from "./components/Hero/Hero";
+// import About from "./components/About/About";
+// import Comments from "./components/Comments/Comments";
+// import CommentsList from "./components/CommentsList/CommentsList";
+// import VideosArray from "./components/VideosArray/VideosArray";
+import VideoUploadPage from "./components/VideoUploadPage/VideoUploadPage";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 //import state below from json file
 import videos from "./data/video-details.json";
@@ -24,8 +27,13 @@ class App extends React.Component {
     return (
       <section>
         <Header />
-        <Hero currentVideo={this.state.currentVideo} />
-        <section className="flex__wrapper">
+
+        {/* // added Video upload page here so I can see styling. Will need to remove */}
+        <VideoUploadPage />
+
+        {/* Moved everything below to Home component */}
+        {/* <Hero currentVideo={this.state.currentVideo} /> */}
+        {/* <section className="flex__wrapper">
           <div className="flex__wrapper-left">
             <About currentVideo={this.state.currentVideo} />
             <Comments currentVideo={this.state.currentVideo} />
@@ -40,7 +48,7 @@ class App extends React.Component {
               handleVideoChange={this.handleVideoChange}
             />
           </section>
-        </section>
+        </section> */}
       </section>
     );
   }

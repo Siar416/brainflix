@@ -1,4 +1,6 @@
 import videoThumbnail from "../../assets/images/Upload-video-preview.jpg";
+import publishIcon from "../../assets/icons/publish.svg";
+import "./VideoUploadPage.scss";
 
 // Reminder: I dont need to import Header page as it will still be displayed when user goes to /uploads
 function VideoUploadPage() {
@@ -9,7 +11,11 @@ function VideoUploadPage() {
         <form className="form">
           <section className="form__thumbnail">
             <h2 className="form__thumbnail__title">VIDEO THUMBNAIL</h2>
-            <img src={videoThumbnail} alt="image of person riding a bike" />
+            <img
+              className="form__thumbnail__image"
+              src={videoThumbnail}
+              alt="image of person riding a bike"
+            />
           </section>
           <section className="form__section">
             <h2 className="form__section__title">TITLE YOUR VIDEO</h2>
@@ -28,9 +34,16 @@ function VideoUploadPage() {
             />
           </section>
         </form>
-        <section className="upload__button">
-          <button className="upload__button-publish">PUBLISH</button>
-          <button className="upload__button-cancel">CANCEL</button>
+        <section className="uploads__button">
+          <button className="uploads__button-publish">
+            <img
+              className="uploads__button-publish-icon"
+              src={publishIcon}
+              alt="publish icon"
+            />
+            PUBLISH
+          </button>
+          <button className="uploads__button-cancel">CANCEL</button>
         </section>
       </section>
     </section>

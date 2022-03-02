@@ -1,0 +1,112 @@
+@use "../../styles/partials/_reset" as *;
+@use "../../styles/partials/colors" as *;
+@use "../../styles/partials/mixins" as *;
+
+// NEED TO FIGURE OUT WHY RESET ISN'T APPLYING THE BOX-SIZING RESET
+* {
+  box-sizing: border-box;
+}
+
+.uploads {
+  border-top: 0.0625rem solid $mercury;
+  margin: 0 1rem;
+
+  &__title {
+    @include page-header-mobile;
+    margin: 2.25rem 0;
+  }
+
+  &__button {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+
+    &-publish {
+      @include subheader-mobile;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1rem;
+      height: 3rem;
+      background-color: $brainflix-blue;
+      border: none;
+      color: $white;
+      border-radius: 0.25rem;
+      width: 100%;
+      position: relative;
+
+      &-icon {
+        position: absolute;
+        left: 0.625rem;
+      }
+    }
+
+    &-cancel {
+      @include subheader-mobile;
+      margin-bottom: 1rem;
+      height: 3rem;
+      border: none;
+      border-radius: 0.25rem;
+      color: $brainflix-blue;
+      background-color: $white;
+    }
+  }
+}
+
+.form {
+  &__thumbnail__title {
+    @include section-header-mobile;
+    color: $silver;
+    margin-bottom: 0.25rem;
+  }
+
+  &__thumbnail__image {
+    margin-bottom: 1.5rem;
+    width: 100%;
+    border-radius: 0.25rem;
+  }
+
+  &__section__title {
+    @include subheader-mobile;
+    color: $silver;
+    margin-bottom: 0.25rem;
+
+    &-input {
+      width: 100%;
+      border-radius: 0.25rem;
+      border: 0.0625rem solid $mercury;
+      outline: none;
+      padding: 1rem;
+      margin-bottom: 1rem;
+
+      &::placeholder {
+        @include subheader-mobile;
+        color: $brainflix-dark-black;
+      }
+    }
+  }
+
+  &__section__desc {
+    @include subheader-mobile;
+    color: $silver;
+    margin-bottom: 0.25rem;
+
+    &-input {
+      width: 100%;
+      height: 6.25rem;
+      border-radius: 0.25rem;
+      border: 0.0625rem solid $mercury;
+      outline: none;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      position: relative;
+
+      &::placeholder {
+        @include subheader-mobile;
+        position: absolute;
+        left: 1rem;
+        color: $brainflix-dark-black;
+      }
+    }
+  }
+}

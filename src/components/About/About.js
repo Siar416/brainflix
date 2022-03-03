@@ -3,16 +3,19 @@ import views from "../../assets/icons/views.svg";
 import likes from "../../assets/icons/likes.svg";
 import "./About.scss";
 
-function About({ currentVideo }) {
+function About({ currentVideo, allVideos }) {
   return (
     <section className="about">
       <section className="about__wrapper">
-        <h1 className="about__title">{currentVideo.title}</h1>
+        {/* <h1 className="about__title">{currentVideo.title}</h1> */}
+        <h1 className="about__title">{allVideos.title}</h1>
         <section className="about__container">
           <div className="about__info">
-            <h2 className="about__info__author">By {currentVideo.channel}</h2>
+            {/* <h2 className="about__info__author">By {currentVideo.channel}</h2> */}
+            <h2 className="about__info__author">By {allVideos.channel}</h2>
             <h2 className="about__info__timestamp">
-              {new Date(currentVideo.timestamp).toLocaleDateString()}
+              {/* {new Date(currentVideo.timestamp).toLocaleDateString()} */}
+              {new Date(allVideos.timestamp).toLocaleDateString()}
             </h2>
           </div>
           <div className="about__stats">
@@ -22,16 +25,23 @@ function About({ currentVideo }) {
                 src={views}
                 alt="image of views"
               />
-              {currentVideo.views}
+              {/* {currentVideo.views} */}
+              {allVideos.views}
             </p>
             <p className="about__stats__likes-img-txt">
-              <img className="about__stats__likes-img" src={likes} alt="" />
-              {currentVideo.likes}
+              <img
+                className="about__stats__likes-img"
+                src={likes}
+                alt="image of heart"
+              />
+              {/* {currentVideo.likes} */}
+              {allVideos.likes}
             </p>
           </div>
         </section>
       </section>
-      <p className="about__description">{currentVideo.description}</p>
+      {/* <p className="about__description">{currentVideo.description}</p> */}
+      <p className="about__description"></p>
     </section>
   );
 }

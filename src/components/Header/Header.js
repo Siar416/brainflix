@@ -10,7 +10,7 @@ function Header() {
         <img src={logo} alt="brainflex logo" />
       </a>
 
-      <section class="header__container">
+      <section className="header__container">
         <form className="header__searchbar">
           <input
             className="header__searchbar-img"

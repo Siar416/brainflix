@@ -1,11 +1,11 @@
-@use "../../styles/partials/_reset" as *;
+@use "../../styles/partials/reset" as *;
 @use "../../styles/partials/colors" as *;
 @use "../../styles/partials/mixins" as *;
 
 // NEED TO FIGURE OUT WHY RESET ISN'T APPLYING THE BOX-SIZING RESET
-* {
-  box-sizing: border-box;
-}
+// * {
+//   box-sizing: border-box;
+// }
 
 .uploads {
   border-top: 0.0625rem solid $mercury;

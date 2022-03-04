@@ -247,7 +247,7 @@
         border: none;
         color: $white;
         border-radius: 0.25rem;
-        width: 30%;
+        width: 15%;
         position: relative;
 
         &-icon {
@@ -258,7 +258,7 @@
 
       &-cancel {
         @include subheader-tablet-desktop;
-        width: 30%;
+        width: 15%;
         margin-bottom: 1rem;
         height: 3rem;
         border: none;

@@ -22,13 +22,6 @@ class Home extends Component {
     sideVideos: [],
   };
 
-  // apiCall = () => {
-  //   axios.get(url + apiKey).get((response) => {
-  //     console.log(response);
-  //   });
-  // };
-
-  //This works
   componentDidMount() {
     axios.get(url + apiKey).then((response) => {
       console.log(response);
@@ -43,9 +36,7 @@ class Home extends Component {
         .then((response) => {
           console.log("2nd");
           this.setState({
-            // allVideos: response.data,
             comments: response.data.comments,
-            // currentVideo: response.data,
             sideVideos: response.data,
           });
         });
@@ -90,7 +81,6 @@ class Home extends Component {
           <Hero current={this.state.currentVideo} />
           <section className="flex__wrapper">
             <div className="flex__wrapper-left">
-              {/* <About allVideos={this.state.allVideos} /> */}
               <About currentVideo={this.state.currentVideo} />
               <Comments
                 currentVideo={this.state.currentVideo}
@@ -100,8 +90,6 @@ class Home extends Component {
             <div>
               <CommentsList
                 comments={this.state.comments}
-                // sideVideos={this.state.sideVideos}
-                // allVideos={this.state.allVideos}
                 currentVideo={this.state.currentVideo}
               />
             </div>
@@ -116,28 +104,6 @@ class Home extends Component {
         </section>
       );
     }
-
-    // return (
-    //   // <section>
-    //     {/* <Hero currentVideo={this.state.currentVideo} />
-    //     <section className="flex__wrapper">
-    //       <div className="flex__wrapper-left">
-    //         <About currentVideo={this.state.currentVideo} />
-    //         <Comments currentVideo={this.state.currentVideo} />
-    //         <div>
-    //           <CommentsList currentVideo={this.state.currentVideo} />
-    //         </div>
-    //       </div>
-    //       <section className="flex__wrapper-right">
-    //         <VideosArray
-    //           videos={this.state.videos}
-    //           currentVideo={this.state.currentVideo}
-    //           handleVideoChange={this.handleVideoChange}
-    //         />
-    //       </section>
-    //     </section> */}
-    //   </section>
-    // );
   }
 }
 

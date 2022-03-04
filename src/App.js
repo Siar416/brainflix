@@ -23,6 +23,12 @@ function App() {
       <Switch>
         <Route path="/" exact component={Home} />
         <Route path="/upload" component={VideoUploadPage} />
+        <Route
+          path="/videos/:id"
+          render={(routerProps) => {
+            return <Home {...routerProps} />;
+          }}
+        />
       </Switch>
     </BrowserRouter>
   );

@@ -18,8 +18,8 @@ class Home extends Component {
   state = {
     allVideos: [],
     currentVideo: [],
-    sideVideos: [],
     comments: [],
+    sideVideos: [],
   };
 
   // apiCall = () => {
@@ -31,38 +31,82 @@ class Home extends Component {
   //This works
   componentDidMount() {
     axios.get(url + apiKey).then((response) => {
-      // console.log(response);
-      // const { allVideos, mainVideo, sideVideos } = response.data;
+      console.log(response);
+      console.log("1st");
       this.setState({
-        // allVideos: response.data,
-        currentVideo: response.data[0].image,
-        // sideVideos: response.data,
+        currentVideo: response.data[0],
+        allVideos: response.data,
       });
 
       axios
-        .get(url + "84e96018-4022-434e-80bf-000ce4cd12b8" + apiKey)
+        .get(`${url}${this.state.currentVideo.id}${apiKey}`)
         .then((response) => {
+          console.log("2nd");
           this.setState({
-            allVideos: response.data,
-            comments: response.data.comments,
-            current: response.data,
+            // allVideos: response.data,
+            // comments: response.data.comments,
+            // currentVideo: response.data,
             sideVideos: response.data,
           });
         });
     });
   }
 
-  render() {
-    return (
-      <section>
-        <Hero current={this.state.currentVideo} />
-        <section className="flex__wrapper">
-          <div className="flex__wrapper-left">
-            <About allVideos={this.state.allVideos} />
-          </div>
-        </section>
-      </section>
+  componentDidUpdate(prevProps) {
+    console.log(this.props.match);
+    const { id } = this.props.match.params;
+    console.log("I updated");
+    if (id !== prevProps.match.params.id) {
+      console.log("3nd");
+      axios
+        .get(`${url}${this.props.match.params.id}${apiKey}`)
+        .then((response) => {
+          this.setState({
+            currentVideo: response.data,
+          });
+        });
+    }
+  }
+
+  handleVideoChange = (id) => {
+    const newVideoId = this.state.allVideos.findIndex(
+      (video) => id === video.id
     );
+    this.setState({
+      currentVideo: this.state.allVideos[newVideoId],
+    });
+  };
+
+  render() {
+    if (
+      this.state.allVideos &&
+      this.state.currentVideo &&
+      this.state.comments &&
+      this.state.sideVideos
+    ) {
+      return (
+        <section>
+          <Hero current={this.state.currentVideo} />
+          <section className="flex__wrapper">
+            <div className="flex__wrapper-left">
+              {/* <About allVideos={this.state.allVideos} /> */}
+              <About currentVideo={this.state.currentVideo} />
+              <Comments currentVideo={this.state.currentVideo} />
+            </div>
+            <div>
+              <CommentsList comments={this.state.comments} />
+            </div>
+          </section>
+          <section className="flex__wrapper-right">
+            <VideosArray
+              videos={this.state.allVideos}
+              currentVideo={this.state.currentVideo}
+              handleVideoChange={this.handleVideoChange}
+            />
+          </section>
+        </section>
+      );
+    }
 
     // return (
     //   // <section>

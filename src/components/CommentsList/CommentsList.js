@@ -1,12 +1,12 @@
 import comments from "../../data/video-details.json";
 import "./CommentsList.scss";
 
-function CommentsList({ currentVideo }) {
+function CommentsList({ currentVideo, allVideos, comments }) {
   // console.log(currentVideo);
 
   return (
     <>
-      {currentVideo.comments.map((comment) => {
+      {comments.map((comment) => {
         return (
           <section className="comments__list">
             <section className="comments__wrapper">

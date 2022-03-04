@@ -8,14 +8,14 @@ function About({ currentVideo, allVideos }) {
     <section className="about">
       <section className="about__wrapper">
         {/* <h1 className="about__title">{currentVideo.title}</h1> */}
-        <h1 className="about__title">{allVideos.title}</h1>
+        <h1 className="about__title">{currentVideo.title}</h1>
         <section className="about__container">
           <div className="about__info">
             {/* <h2 className="about__info__author">By {currentVideo.channel}</h2> */}
-            <h2 className="about__info__author">By {allVideos.channel}</h2>
+            <h2 className="about__info__author">By {currentVideo.channel}</h2>
             <h2 className="about__info__timestamp">
               {/* {new Date(currentVideo.timestamp).toLocaleDateString()} */}
-              {new Date(allVideos.timestamp).toLocaleDateString()}
+              {new Date(currentVideo.timestamp).toLocaleDateString()}
             </h2>
           </div>
           <div className="about__stats">
@@ -26,7 +26,7 @@ function About({ currentVideo, allVideos }) {
                 alt="image of views"
               />
               {/* {currentVideo.views} */}
-              {allVideos.views}
+              {currentVideo.views}
             </p>
             <p className="about__stats__likes-img-txt">
               <img
@@ -35,7 +35,7 @@ function About({ currentVideo, allVideos }) {
                 alt="image of heart"
               />
               {/* {currentVideo.likes} */}
-              {allVideos.likes}
+              {currentVideo.likes}
             </p>
           </div>
         </section>

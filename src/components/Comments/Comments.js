@@ -7,7 +7,7 @@ function Comments({ currentVideo, comments }) {
     <section className="comments">
       <h2 className="comments__header">
         {/* {currentVideo.comments.length + " Comments"} */}
-        {comments} Comments
+        {comments.length} Comments
       </h2>
       <section className="comments__form">
         <img

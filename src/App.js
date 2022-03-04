@@ -10,7 +10,7 @@ import Home from "./Home";
 // import CommentsList from "./components/CommentsList/CommentsList";
 // import VideosArray from "./components/VideosArray/VideosArray";
 import VideoUploadPage from "./components/VideoUploadPage/VideoUploadPage";
-import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
 
 //import state below from json file
 import videos from "./data/video-details.json";

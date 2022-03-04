@@ -44,7 +44,7 @@ class Home extends Component {
           console.log("2nd");
           this.setState({
             // allVideos: response.data,
-            // comments: response.data.comments,
+            comments: response.data.comments,
             // currentVideo: response.data,
             sideVideos: response.data,
           });
@@ -63,6 +63,7 @@ class Home extends Component {
         .then((response) => {
           this.setState({
             currentVideo: response.data,
+            comments: response.data.comments,
           });
         });
     }
@@ -91,10 +92,18 @@ class Home extends Component {
             <div className="flex__wrapper-left">
               {/* <About allVideos={this.state.allVideos} /> */}
               <About currentVideo={this.state.currentVideo} />
-              <Comments currentVideo={this.state.currentVideo} />
+              <Comments
+                currentVideo={this.state.currentVideo}
+                comments={this.state.comments}
+              />
             </div>
             <div>
-              <CommentsList comments={this.state.comments} />
+              <CommentsList
+                comments={this.state.comments}
+                // sideVideos={this.state.sideVideos}
+                // allVideos={this.state.allVideos}
+                currentVideo={this.state.currentVideo}
+              />
             </div>
           </section>
           <section className="flex__wrapper-right">

@@ -7,14 +7,10 @@ function Comments({ comments }) {
     <section className="comments">
       <h2 className="comments__header">{comments.length} Comments</h2>
       <section className="comments__form">
-        <img
-          className="comments__form__img"
-          src={avatar}
-          alt="image of Mohan"
-        />
+        <img className="comments__img" src={avatar} alt="image of Mohan" />
         <section className="comments__input">
-          <form className="comments__input-field">
-            <section className="comments__input-field-txt">
+          <form className="comments__field">
+            <section className="comments__field-txt">
               <h2>JOIN THE CONVERSATION</h2>
               <input
                 className="comments__textarea"
@@ -30,7 +26,7 @@ function Comments({ comments }) {
                 }}
               >
                 <img
-                  className="comments__btn-submit-img"
+                  className="comments__btn-img"
                   src={plusSign}
                   alt="image of plus sign"
                 />

@@ -19,12 +19,12 @@
     display: flex;
     justify-content: space-between;
     padding-bottom: 1rem;
+  }
 
-    &__img {
-      height: 2.5rem;
-      width: 2.5rem;
-      border-radius: 50%;
-    }
+  &__img {
+    height: 2.5rem;
+    width: 2.5rem;
+    border-radius: 50%;
   }
 
   &__textarea {
@@ -54,21 +54,25 @@
   &__input {
     margin: 0 auto;
     width: 100%;
+  }
 
-    &-field {
-      display: flex;
-      flex-direction: column;
-      margin-left: 1rem;
+  &__field {
+    display: flex;
+    flex-direction: column;
+    margin-left: 1rem;
 
-      &-txt {
-        @include subheader-mobile;
-        color: $silver;
-      }
+    &-txt {
+      @include subheader-mobile;
+      color: $silver;
     }
   }
 
   &__btn {
     @include body-mobile;
+
+    &-img {
+      margin-right: 25vw;
+    }
 
     &-submit {
       @include body-mobile;
@@ -87,10 +91,6 @@
       &:hover {
         background-color: $brainflix-dark-blue;
       }
-
-      &-img {
-        margin-right: 25vw;
-      }
     }
   }
 }
@@ -102,13 +102,13 @@
 
     &__form {
       align-items: center;
-
-      &__img {
-        margin-right: 1rem;
-      }
     }
 
-    &__input-field {
+    &__img {
+      margin-right: 1rem;
+    }
+
+    &__field {
       display: flex;
       flex-direction: row;
       justify-content: space-between;
@@ -132,10 +132,10 @@
     &__btn-submit {
       height: 2.5rem;
       margin-right: 1rem;
+    }
 
-      &-img {
-        margin-right: 1.5625rem;
-      }
+    &__btn-img {
+      margin-right: 1.5625rem;
     }
   }
 }
@@ -151,14 +151,14 @@
       align-items: flex-end;
       border-bottom: none;
       padding-bottom: 0;
-
-      &__img {
-        margin-right: 1rem;
-        margin-left: 1.7rem;
-      }
     }
 
-    &__input-field {
+    &__img {
+      margin-right: 1rem;
+      margin-left: 1.7rem;
+    }
+
+    &__field {
       display: flex;
       flex-direction: row;
       align-items: flex-end;
@@ -185,10 +185,10 @@
     &__btn-submit {
       height: 2.5rem;
       margin-right: 1rem;
+    }
 
-      &-img {
-        margin-right: 1.5625rem;
-      }
+    &__btn-img {
+      margin-right: 1.5625rem;
     }
   }
 }

@@ -59,16 +59,18 @@
       border: none;
       border-radius: 0.25rem;
       display: flex;
+      justify-content: center;
       flex-direction: row;
       align-items: center;
+      position: relative;
 
       &:hover {
         background-color: $cta-hover;
       }
 
       &-img {
-        margin-right: 40%;
-        height: 1.875rem;
+        position: absolute;
+        left: 16px;
       }
     }
 
@@ -118,11 +120,6 @@
     &__btn-upload {
       width: 20vw;
       display: flex;
-      margin-bottom: 1rem;
-
-      &-img {
-        margin-right: 3.125rem;
-      }
     }
 
     &__searchbar {
@@ -168,11 +165,6 @@
 
     &__btn-upload {
       width: 15vw;
-      justify-content: flex-start;
-
-      &-img {
-        margin-right: 3.125rem;
-      }
     }
     &__searchbar {
       width: 20vw;

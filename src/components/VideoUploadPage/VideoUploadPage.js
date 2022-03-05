@@ -39,7 +39,7 @@ function VideoUploadPage() {
             />
           </section>
         </form>
-        <section className="uploads__button">
+        <div className="uploads__button">
           <button className="uploads__button-publish" onClick={uploadBtn}>
             <Link to="/">
               <img
@@ -52,7 +52,7 @@ function VideoUploadPage() {
           </button>
 
           <button className="uploads__button-cancel">CANCEL</button>
-        </section>
+        </div>
       </section>
     </section>
   );

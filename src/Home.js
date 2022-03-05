@@ -66,9 +66,9 @@ class Home extends Component {
       this.state.comments
     ) {
       return (
-        <section>
+        <>
           <Hero current={this.state.currentVideo} />
-          <section className="flex__wrapper">
+          <div className="flex__wrapper">
             <div className="flex__wrapper-left">
               <About
                 currentVideo={this.state.currentVideo}
@@ -93,8 +93,8 @@ class Home extends Component {
                 handleVideoChange={this.handleVideoChange}
               />
             </section>
-          </section>
-        </section>
+          </div>
+        </>
       );
     }
   }

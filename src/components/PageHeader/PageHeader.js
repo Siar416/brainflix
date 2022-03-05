@@ -6,11 +6,11 @@ import { Link } from "react-router-dom";
 
 function PageHeader() {
   return (
-    <section className="header">
+    <main className="header">
       <Link to="/" className="header__logo">
         <img src={logo} alt="brainflex logo" />
       </Link>
-      <section className="header__container">
+      <div className="header__container">
         <form className="header__searchbar">
           <input
             className="header__searchbar-img"
@@ -25,8 +25,8 @@ function PageHeader() {
           />
         </form>
         <article className="header__btn-avatar"></article>
-      </section>
-      <section className="header__btn">
+      </div>
+      <div className="header__btn">
         <Link to="/upload" className="header__btn-upload">
           <button className="header__btn-upload">
             <img
@@ -38,8 +38,8 @@ function PageHeader() {
           </button>
         </Link>
         <article className="header__btn-avatar header__btn-avatar--hidden"></article>
-      </section>
-    </section>
+      </div>
+    </main>
   );
 }
 

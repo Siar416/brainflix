@@ -6,9 +6,9 @@ function Comments({ comments }) {
   return (
     <section className="comments">
       <h2 className="comments__header">{comments.length} Comments</h2>
-      <section className="comments__form">
+      <div className="comments__form">
         <img className="comments__img" src={avatar} alt="image of Mohan" />
-        <section className="comments__input">
+        <div className="comments__input">
           <form className="comments__field">
             <section className="comments__field-txt">
               <h2>JOIN THE CONVERSATION</h2>
@@ -18,7 +18,7 @@ function Comments({ comments }) {
                 placeholder="Add a new comment"
               />
             </section>
-            <section className="comments__btn">
+            <div className="comments__btn">
               <button
                 className="comments__btn-submit"
                 onClick={(e) => {
@@ -32,10 +32,10 @@ function Comments({ comments }) {
                 />
                 COMMENT
               </button>
-            </section>
+            </div>
           </form>
-        </section>
-      </section>
+        </div>
+      </div>
     </section>
   );
 }

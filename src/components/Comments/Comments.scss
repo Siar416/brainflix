@@ -6,16 +6,16 @@
 .comments {
   font-family: avenir;
   padding: 0 1rem;
-  background-color: $white;
+  background-color: $background-color;
 
   &__header {
     @include subheader-mobile;
     padding-bottom: 1rem;
-    color: $brainflix-black;
+    color: $primary-color;
   }
 
   &__form {
-    border-bottom: 0.0625rem solid $mercury;
+    border-bottom: 0.0625rem solid $divider-color;
     display: flex;
     justify-content: space-between;
     padding-bottom: 1rem;
@@ -31,11 +31,11 @@
     height: 6.25rem;
     width: 98%;
     outline: none;
-    border: 0.0625rem solid $mercury;
+    border: 0.0625rem solid $divider-color;
     margin-top: 0.25rem;
     position: relative;
     margin-bottom: 1rem;
-    background-color: $alabaster;
+    background-color: $form-background-color;
 
     &::placeholder {
       line-height: 4.375rem;
@@ -48,7 +48,7 @@
   }
 
   &__textarea:focus {
-    border: 0.125rem solid $brainflix-blue;
+    border: 0.125rem solid $form-outline-color;
   }
 
   &__input {
@@ -63,7 +63,7 @@
 
     &-txt {
       @include subheader-mobile;
-      color: $silver;
+      color: $secondary-color;
     }
   }
 
@@ -76,9 +76,9 @@
 
     &-submit {
       @include body-mobile;
-      color: $white;
+      color: $background-color;
       width: 100%;
-      background-color: $brainflix-blue;
+      background-color: $button-color;
       height: 2.5rem;
       border: none;
       border-radius: 0.25rem;
@@ -89,7 +89,7 @@
       padding-left: 1rem;
 
       &:hover {
-        background-color: $brainflix-dark-blue;
+        background-color: $cta-hover;
       }
     }
   }

@@ -7,7 +7,7 @@
   display: flex;
   flex-direction: column;
 
-  background-color: $white;
+  background-color: $background-color;
   padding: 1rem 1rem;
 
   &__container {
@@ -27,7 +27,7 @@
     border-radius: 0.25rem;
     width: 90vw;
     height: 3rem;
-    border: 0.0625rem solid $mercury;
+    border: 0.0625rem solid $divider-color;
 
     &-img {
       margin: 0 1rem;
@@ -52,8 +52,8 @@
 
     &-upload {
       @include body-mobile;
-      color: $white;
-      background-color: $brainflix-blue;
+      color: $background-color;
+      background-color: $button-color;
       width: 100%;
       height: 3rem;
       border: none;
@@ -63,7 +63,7 @@
       align-items: center;
 
       &:hover {
-        background-color: $brainflix-dark-blue;
+        background-color: $cta-hover;
       }
 
       &-img {

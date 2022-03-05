@@ -9,21 +9,21 @@
 
   &__author {
     @include subheader-mobile;
-    color: $brainflix-black;
+    color: $primary-color;
   }
 
   &__timestamp {
     @include subheader-mobile;
-    color: $silver;
+    color: $secondary-color;
   }
 
   &__views-txt {
-    color: $silver;
+    color: $secondary-color;
     display: flex;
   }
 
   &__likes-txt {
-    color: $silver;
+    color: $secondary-color;
     display: flex;
   }
 
@@ -40,15 +40,15 @@
   &__container {
     display: flex;
     justify-content: space-between;
-    border-top: 0.0625rem solid $mercury;
-    border-bottom: 0.0625rem solid $mercury;
+    border-top: 0.0625rem solid $divider-color;
+    border-bottom: 0.0625rem solid $divider-color;
     margin-top: 1rem;
   }
 
   &__title {
     @include page-header-mobile;
     width: 100%;
-    color: $brainflix-black;
+    color: $primary-color;
   }
 
   &__info {
@@ -79,7 +79,7 @@
   &__description {
     @include body-mobile;
     padding: 1rem 0;
-    color: $brainflix-black;
+    color: $primary-color;
   }
 }
 

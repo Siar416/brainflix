@@ -8,36 +8,36 @@
   padding: 1rem 0;
   margin: 0 1rem;
   border-bottom: 0.0625rem solid $mercury;
-
-  &__comment {
-    @include body-mobile;
-    padding: 0 0 0 3.5rem;
-    color: $brainflix-black;
-  }
 }
 
 .comments__wrapper {
   display: flex;
   align-items: center;
+}
 
-  &__name {
-    @include subheader-tablet-desktop;
-    color: $brainflix-black;
-  }
+.comments__avatar {
+  background-color: $mercury;
+  height: 2.5rem;
+  width: 2.5rem;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 1rem;
+}
 
-  &__avatar {
-    background-color: $mercury;
-    height: 2.5rem;
-    width: 2.5rem;
-    border-radius: 50%;
-    display: inline-block;
-    margin-right: 1rem;
-  }
+.comments__name {
+  @include subheader-mobile;
+  color: $brainflix-black;
+}
 
-  &__date {
-    margin-left: auto;
-    color: $silver;
-  }
+.comments__date {
+  margin-left: auto;
+  color: $silver;
+}
+
+.comments__array {
+  @include body-mobile;
+  padding: 0 0 0 3.5rem;
+  color: $brainflix-black;
 }
 
 // styling for tablet
@@ -48,10 +48,21 @@
   .comments__list {
     padding: 1.5rem 0;
     margin: 0 2.25rem;
+  }
 
-    &__comment {
-      @include body-tablet-desktop;
-    }
+  .comments__name {
+    @include subheader-tablet-desktop;
+    color: $brainflix-black;
+  }
+
+  .comments__date {
+    @include subheader-tablet-desktop;
+    margin-left: auto;
+    color: $silver;
+  }
+
+  .comments__array {
+    @include body-tablet-desktop;
   }
 }
 
@@ -65,9 +76,20 @@
     margin: 1.5rem 0 1.5rem 11.25rem;
     border-bottom: none;
     border-top: 0.0625rem solid $mercury;
+  }
 
-    &__comment {
-      @include body-tablet-desktop;
-    }
+  .comments__name {
+    @include subheader-tablet-desktop;
+    color: $brainflix-black;
+  }
+
+  .comments__date {
+    @include subheader-tablet-desktop;
+    margin-left: auto;
+    color: $silver;
+  }
+
+  .comments__array {
+    @include body-tablet-desktop;
   }
 }

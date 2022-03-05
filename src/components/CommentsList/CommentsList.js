@@ -1,4 +1,3 @@
-import comments from "../../data/video-details.json";
 import "./CommentsList.scss";
 
 function CommentsList({ comments }) {
@@ -8,13 +7,13 @@ function CommentsList({ comments }) {
         return (
           <section key={comment.id} className="comments__list">
             <section className="comments__wrapper">
-              <p className="comments__wrapper__avatar" />
-              <p className="comments__wrapper__name">{comment.name}</p>
-              <p className="comments__wrapper__date">
+              <p className="comments__avatar" />
+              <p className="comments__name">{comment.name}</p>
+              <p className="comments__date">
                 {new Date(comment.timestamp).toLocaleDateString()}
               </p>
             </section>
-            <p className="comments__list__comment">{comment.comment}</p>
+            <p className="comments__array">{comment.comment}</p>
           </section>
         );
       })}

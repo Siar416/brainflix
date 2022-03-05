@@ -2,6 +2,11 @@
 @use "../../styles/partials/colors" as *;
 @use "../../styles/partials/mixins" as *;
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .videos__item {
   display: flex;
   margin-bottom: 1rem;

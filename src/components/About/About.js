@@ -3,7 +3,7 @@ import views from "../../assets/icons/views.svg";
 import likes from "../../assets/icons/likes.svg";
 import "./About.scss";
 
-function About({ currentVideo, allVideos }) {
+function About({ currentVideo, allVideos, sideVideos }) {
   return (
     <section className="about">
       <section className="about__wrapper">

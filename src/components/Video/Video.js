@@ -5,7 +5,7 @@ function Video({ id, image, title, channel, handleVideoChange }) {
   return (
     <li>
       <Link to={`/videos/${id}`}>
-        <section className="videos__item" onClick={() => handleVideoChange(id)}>
+        <section className="videos__item">
           <img className="videos__item__img" src={image} />
           <section className="videos__wrapper">
             <p className="videos__wrapper__title">{title}</p>

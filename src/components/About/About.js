@@ -3,6 +3,7 @@ import likes from "../../assets/icons/likes.svg";
 import "./About.scss";
 
 function About({ currentVideo }) {
+  console.log(currentVideo);
   return (
     <section className="about">
       <section className="about__wrapper">
@@ -34,7 +35,7 @@ function About({ currentVideo }) {
           </div>
         </section>
       </section>
-      <p className="about__description"></p>
+      <p className="about__description">{currentVideo.description}</p>
     </section>
   );
 }

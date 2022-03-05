@@ -2,13 +2,10 @@ import avatar from "../../assets/images/Mohan-muruge.jpg";
 import plusSign from "../../assets/icons/add_comment.svg";
 import "./Comments.scss";
 
-function Comments({ currentVideo, comments }) {
+function Comments({ comments }) {
   return (
     <section className="comments">
-      <h2 className="comments__header">
-        {/* {currentVideo.comments.length + " Comments"} */}
-        {comments.length} Comments
-      </h2>
+      <h2 className="comments__header">{comments.length} Comments</h2>
       <section className="comments__form">
         <img
           className="comments__form__img"

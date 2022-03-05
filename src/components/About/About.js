@@ -1,20 +1,16 @@
-import VideoDetail from "../../data/video-details.json";
 import views from "../../assets/icons/views.svg";
 import likes from "../../assets/icons/likes.svg";
 import "./About.scss";
 
-function About({ currentVideo, allVideos, sideVideos }) {
+function About({ currentVideo }) {
   return (
     <section className="about">
       <section className="about__wrapper">
-        {/* <h1 className="about__title">{currentVideo.title}</h1> */}
         <h1 className="about__title">{currentVideo.title}</h1>
         <section className="about__container">
           <div className="about__info">
-            {/* <h2 className="about__info__author">By {currentVideo.channel}</h2> */}
             <h2 className="about__info__author">By {currentVideo.channel}</h2>
             <h2 className="about__info__timestamp">
-              {/* {new Date(currentVideo.timestamp).toLocaleDateString()} */}
               {new Date(currentVideo.timestamp).toLocaleDateString()}
             </h2>
           </div>
@@ -25,7 +21,6 @@ function About({ currentVideo, allVideos, sideVideos }) {
                 src={views}
                 alt="image of views"
               />
-              {/* {currentVideo.views} */}
               {currentVideo.views}
             </p>
             <p className="about__stats__likes-img-txt">
@@ -34,13 +29,11 @@ function About({ currentVideo, allVideos, sideVideos }) {
                 src={likes}
                 alt="image of heart"
               />
-              {/* {currentVideo.likes} */}
               {currentVideo.likes}
             </p>
           </div>
         </section>
       </section>
-      {/* <p className="about__description">{currentVideo.description}</p> */}
       <p className="about__description"></p>
     </section>
   );

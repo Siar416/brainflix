@@ -2,14 +2,14 @@ import logo from "../../assets/logo/BrainFlix-logo.svg";
 import search from "../../assets/icons/search.svg";
 import upload from "../../assets/icons/upload.svg";
 import "./Header.scss";
+import { Link } from "react-router-dom";
 
 function Header() {
   return (
     <section className="header">
-      <a className="header__logo" href="index.html">
+      <Link to="/" className="header__logo">
         <img src={logo} alt="brainflex logo" />
-      </a>
-
+      </Link>
       <section className="header__container">
         <form className="header__searchbar">
           <input
@@ -26,16 +26,17 @@ function Header() {
         </form>
         <article className="header__btn-avatar"></article>
       </section>
-
       <section className="header__btn">
-        <button className="header__btn-upload">
-          <img
-            className="header__btn-upload-img"
-            src={upload}
-            alt="image of upload icon"
-          />
-          UPLOAD
-        </button>
+        <Link to="/upload" className="header__btn-upload">
+          <button className="header__btn-upload">
+            <img
+              className="header__btn-upload-img"
+              src={upload}
+              alt="image of upload icon"
+            />
+            UPLOAD
+          </button>
+        </Link>
         <article className="header__btn-avatar header__btn-avatar--hidden"></article>
       </section>
     </section>

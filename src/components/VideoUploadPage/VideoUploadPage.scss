@@ -220,14 +220,14 @@
 @include desktop-screen {
   .uploads {
     border-top: 0.0625rem solid $mercury;
-    padding: 0 180px 180px;
+    padding: 0 11.25rem 11.25rem;
     margin: 0;
 
     &__title {
       @include page-header-tablet-desktop;
       margin: 2.25rem 0;
       border-bottom: 0.0625rem solid $mercury;
-      padding-bottom: 36px;
+      padding-bottom: 2.25rem;
     }
 
     &__button {

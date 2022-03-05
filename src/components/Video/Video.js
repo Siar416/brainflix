@@ -1,7 +1,7 @@
 import "./Video.scss";
 import { Link } from "react-router-dom";
 
-function Video({ id, image, title, channel, handleVideoChange }) {
+function Video({ id, image, title, channel }) {
   return (
     <li>
       <Link to={`/videos/${id}`}>

@@ -1,9 +1,14 @@
 import videoThumbnail from "../../assets/images/Upload-video-preview.jpg";
 import publishIcon from "../../assets/icons/publish.svg";
 import "./VideoUploadPage.scss";
+import { Link } from "react-router-dom";
 
-// Reminder: I dont need to import Header page as it will still be displayed when user goes to /uploads
 function VideoUploadPage() {
+  const uploadBtn = (event) => {
+    event.preventDefault();
+    alert("Thank you! You're video has been uploaded!");
+  };
+
   return (
     <section className="uploads">
       <section className="uploads__wrapper">
@@ -35,14 +40,17 @@ function VideoUploadPage() {
           </section>
         </form>
         <section className="uploads__button">
-          <button className="uploads__button-publish">
-            <img
-              className="uploads__button-publish-icon"
-              src={publishIcon}
-              alt="publish icon"
-            />
-            PUBLISH
+          <button className="uploads__button-publish" onClick={uploadBtn}>
+            <Link to="/">
+              <img
+                className="uploads__button-publish-icon"
+                src={publishIcon}
+                alt="publish icon"
+              />
+              PUBLISH
+            </Link>
           </button>
+
           <button className="uploads__button-cancel">CANCEL</button>
         </section>
       </section>

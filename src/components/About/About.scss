@@ -7,6 +7,36 @@
   background-color: &white;
   padding: 1.5rem 1rem 1rem 1rem;
 
+  &__author {
+    @include subheader-mobile;
+    color: $brainflix-black;
+  }
+
+  &__timestamp {
+    @include subheader-mobile;
+    color: $silver;
+  }
+
+  &__views-txt {
+    color: $silver;
+    display: flex;
+  }
+
+  &__likes-txt {
+    color: $silver;
+    display: flex;
+  }
+
+  &__likes-img {
+    width: 1.5625rem;
+    margin-right: 0.625rem;
+  }
+
+  &__views-img {
+    width: 1.5625rem;
+    margin-right: 0.625rem;
+  }
+
   &__container {
     display: flex;
     justify-content: space-between;
@@ -24,19 +54,9 @@
   &__info {
     display: flex;
     justify-content: space-around;
-    align-items: center;
+    align-items: flex-start;
     flex-direction: column;
     height: 6.25rem;
-
-    &__timestamp {
-      @include subheader-mobile;
-      color: $silver;
-    }
-
-    &__author {
-      @include subheader-mobile;
-      color: $brainflix-black;
-    }
   }
 
   &__stats {
@@ -50,25 +70,10 @@
     justify-content: space-around;
     align-items: flex-start;
 
-    &__views-img {
-      width: 1.5625rem;
-      margin-right: 0.625rem;
-
-      &-txt {
-        color: $silver;
-        display: flex;
-      }
-    }
-
-    &__likes-img {
-      width: 1.5625rem;
-      margin-right: 0.625rem;
-
-      &-txt {
-        color: $silver;
-        display: flex;
-      }
-    }
+    // &__likes-img {
+    //   width: 1.5625rem;
+    //   margin-right: 0.625rem;
+    // }
   }
 
   &__description {
@@ -82,6 +87,19 @@
 @include tablet-screen {
   .about {
     padding: 2.25rem;
+
+    &__timestamp {
+      @include subheader-tablet-desktop;
+      margin-left: 1.25rem;
+    }
+
+    &__views-txt {
+      margin-right: 1.25rem;
+    }
+
+    &__author {
+      @include subheader-tablet-desktop;
+    }
 
     &__title {
       @include page-header-tablet-desktop;
@@ -98,15 +116,6 @@
     &__info {
       height: 0;
       flex-direction: row;
-
-      &__timestamp {
-        @include subheader-tablet-desktop;
-        margin-left: 1.25rem;
-      }
-
-      &__author {
-        @include subheader-tablet-desktop;
-      }
     }
 
     &__stats {
@@ -114,10 +123,6 @@
       margin-right: 0;
       flex-direction: row;
       flex-wrap: nowrap;
-
-      &__views-img-txt {
-        margin-right: 1.25rem;
-      }
     }
 
     &__description {
@@ -130,6 +135,23 @@
 @include desktop-screen {
   .about {
     padding: 2.25rem 0 2.25rem 11.25rem;
+
+    &__timestamp {
+      @include subheader-tablet-desktop;
+      margin-left: 2.25rem;
+    }
+
+    &__views-txt {
+      margin-right: 1.25rem;
+    }
+
+    &__likes-txt {
+      margin-right: 1rem;
+    }
+
+    &__author {
+      @include subheader-tablet-desktop;
+    }
 
     &__title {
       @include page-header-tablet-desktop;
@@ -147,15 +169,6 @@
       height: 0;
       display: flex;
       flex-direction: row;
-
-      &__timestamp {
-        @include subheader-tablet-desktop;
-        margin-left: 2.25rem;
-      }
-
-      &__author {
-        @include subheader-tablet-desktop;
-      }
     }
 
     &__stats {
@@ -163,14 +176,6 @@
       margin-right: 0;
       display: flex;
       flex-direction: row;
-
-      &__likes-img-txt {
-        margin-right: 1rem;
-      }
-
-      &__views-img-txt {
-        margin-right: 1.25rem;
-      }
     }
 
     &__description {

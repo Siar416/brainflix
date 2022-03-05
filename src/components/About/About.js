@@ -9,23 +9,23 @@ function About({ currentVideo }) {
         <h1 className="about__title">{currentVideo.title}</h1>
         <section className="about__container">
           <div className="about__info">
-            <h2 className="about__info__author">By {currentVideo.channel}</h2>
-            <h2 className="about__info__timestamp">
+            <h2 className="about__author">By {currentVideo.channel}</h2>
+            <h2 className="about__timestamp">
               {new Date(currentVideo.timestamp).toLocaleDateString()}
             </h2>
           </div>
           <div className="about__stats">
-            <p className="about__stats__views-img-txt">
+            <p className="about__views-txt">
               <img
-                className="about__stats__views-img"
+                className="about__views-img"
                 src={views}
                 alt="image of views"
               />
               {currentVideo.views}
             </p>
-            <p className="about__stats__likes-img-txt">
+            <p className="about__likes-txt">
               <img
-                className="about__stats__likes-img"
+                className="about__likes-img"
                 src={likes}
                 alt="image of heart"
               />

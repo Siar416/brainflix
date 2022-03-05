@@ -1,6 +1,6 @@
 import React from "react";
 import "./global.scss";
-import Header from "./components/Header/Header";
+import PageHeader from "./components/PageHeader/PageHeader";
 import Home from "./Home";
 
 import VideoUploadPage from "./components/VideoUploadPage/VideoUploadPage";
@@ -9,7 +9,7 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 function App() {
   return (
     <BrowserRouter>
-      <Header />
+      <PageHeader />
       <Switch>
         <Route path="/" exact component={Home} />
         <Route path="/upload" component={VideoUploadPage} />

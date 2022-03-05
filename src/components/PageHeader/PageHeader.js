@@ -1,10 +1,10 @@
 import logo from "../../assets/logo/BrainFlix-logo.svg";
 import search from "../../assets/icons/search.svg";
 import upload from "../../assets/icons/upload.svg";
-import "./Header.scss";
+import "./PageHeader.scss";
 import { Link } from "react-router-dom";
 
-function Header() {
+function PageHeader() {
   return (
     <section className="header">
       <Link to="/" className="header__logo">
@@ -43,4 +43,4 @@ function Header() {
   );
 }
 
-export default Header;
+export default PageHeader;

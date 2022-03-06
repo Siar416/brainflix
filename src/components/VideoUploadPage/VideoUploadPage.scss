@@ -275,6 +275,12 @@
     &__section {
       width: 100%;
     }
+
+    &__thumbnail {
+      width: 50%;
+      margin-right: 2.25rem;
+    }
+
     &__thumbnail__title {
       @include subheader-tablet-desktop;
       color: $secondary-color;
@@ -282,7 +288,8 @@
     }
     &__thumbnail__image {
       margin-bottom: 1.5rem;
-      width: 70%;
+      width: 100%;
+      height: 13.4375rem;
       border-radius: 0.25rem;
     }
     &__section__title {
@@ -312,7 +319,7 @@
 
       &-input {
         width: 100%;
-        height: 6.25rem;
+        height: 8.25rem;
         border-radius: 0.25rem;
         border: 0.0625rem solid $divider-color;
         outline: none;

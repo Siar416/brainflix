@@ -19,6 +19,8 @@
 // tablet styling
 @include tablet-screen {
   .hero {
+    height: 51.25vw;
+
     &__img {
       height: 52vw;
       object-fit: cover;
@@ -31,6 +33,7 @@
 //Destop styling
 @include desktop-screen {
   .hero {
+    height: 40vw;
     &__img {
       height: 40vw;
       width: 100%;

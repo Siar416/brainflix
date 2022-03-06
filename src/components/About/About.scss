@@ -81,7 +81,10 @@
 // tablet styling
 @include tablet-screen {
   .about {
-    padding: 2.25rem;
+    padding: 0;
+    // padding: 2.25rem;
+    // padding: 0 2.25rem 2.25rem;
+    margin: 2.25rem;
 
     &__timestamp {
       @include subheader-tablet-desktop;

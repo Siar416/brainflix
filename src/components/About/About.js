@@ -3,7 +3,6 @@ import likes from "../../assets/icons/likes.svg";
 import "./About.scss";
 
 function About({ currentVideo }) {
-  console.log(currentVideo);
   return (
     <section className="about">
       <section className="about__wrapper">

@@ -23,14 +23,16 @@ function VideoUploadPage() {
             />
           </section>
           <section className="form__section">
-            <h2 className="form__section__title">TITLE YOUR VIDEO</h2>
+            <label className="form__section__title">TITLE YOUR VIDEO</label>
             <input
               name="title"
               type="text"
               className="form__section__title-input"
               placeholder="Add a title to your video"
             />
-            <h2 className="form__section__desc">ADD A VIDEO DESCRIPTION</h2>
+            <label className="form__section__desc">
+              ADD A VIDEO DESCRIPTION
+            </label>
             <input
               name="description"
               type="text"
@@ -39,6 +41,7 @@ function VideoUploadPage() {
             />
           </section>
         </form>
+
         <div className="uploads__button">
           <button className="uploads__button-publish" onClick={uploadBtn}>
             <Link to="/">

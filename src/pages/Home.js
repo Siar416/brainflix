@@ -19,20 +19,24 @@ class Home extends Component {
   };
 
   componentDidMount() {
-    axios.get(url + apiKey).then((response) => {
-      this.setState({
-        allVideos: response.data,
-      });
-
-      const videoId = this.props.match.params.id || this.state.allVideos[0].id;
-
-      axios.get(`${url}${videoId}${apiKey}`).then((response) => {
+    axios
+      .get(url + apiKey)
+      .then((response) => {
         this.setState({
-          comments: response.data.comments,
-          currentVideo: response.data,
+          allVideos: response.data,
         });
-      });
-    });
+
+        const videoId =
+          this.props.match.params.id || this.state.allVideos[0].id;
+
+        axios.get(`${url}${videoId}${apiKey}`).then((response) => {
+          this.setState({
+            comments: response.data.comments,
+            currentVideo: response.data,
+          });
+        });
+      })
+      .catch((err) => console.log(`${err} Unable to load data`));
   }
 
   componentDidUpdate(prevProps) {
@@ -45,7 +49,8 @@ class Home extends Component {
             currentVideo: response.data,
             comments: response.data.comments,
           });
-        });
+        })
+        .catch((err) => console.log(`${err} Unable to load data`));
     }
   }
 

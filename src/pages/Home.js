@@ -22,6 +22,7 @@ class Home extends Component {
     axios
       .get(url + apiKey)
       .then((response) => {
+        console.log(response);
         this.setState({
           allVideos: response.data,
         });
@@ -39,11 +40,13 @@ class Home extends Component {
       .catch((err) => console.log(`${err} Unable to load data`));
   }
 
-  componentDidUpdate(prevProps) {
-    const { id } = this.props.match.params;
-    if (prevProps.match.params.id && id !== prevProps.match.params.id) {
+  componentDidUpdate(prevProps, prevState) {
+    // const { id } = this.props.match.params;
+    const videoId = this.props.match.params.id || this.state.allVideos[0].id;
+
+    if (prevState.currentVideo && prevState.currentVideo.id !== videoId) {
       axios
-        .get(`${url}${this.props.match.params.id}${apiKey}`)
+        .get(`${url}${videoId}${apiKey}`)
         .then((response) => {
           this.setState({
             currentVideo: response.data,
@@ -53,15 +56,6 @@ class Home extends Component {
         .catch((err) => console.log(`${err} Unable to load data`));
     }
   }
-
-  handleVideoChange = (id) => {
-    const newVideoId = this.state.allVideos.findIndex(
-      (video) => id === video.id
-    );
-    this.setState({
-      currentVideo: this.state.allVideos[newVideoId],
-    });
-  };
 
   render() {
     if (
@@ -94,7 +88,6 @@ class Home extends Component {
               <VideosArray
                 videos={this.state.allVideos}
                 currentVideo={this.state.currentVideo}
-                handleVideoChange={this.handleVideoChange}
               />
             </section>
           </div>

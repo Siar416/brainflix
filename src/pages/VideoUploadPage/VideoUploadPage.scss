@@ -80,6 +80,10 @@
         color: $brainflix-dark-black;
       }
     }
+
+    &-input:focus {
+      border: 0.125rem solid $form-outline-color;
+    }
   }
 
   &__section__desc {
@@ -104,6 +108,10 @@
         left: 1rem;
         color: $brainflix-dark-black;
       }
+    }
+
+    &-input:focus {
+      border: 0.125rem solid $form-outline-color;
     }
   }
 }

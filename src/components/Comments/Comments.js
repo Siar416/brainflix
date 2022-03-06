@@ -11,7 +11,7 @@ function Comments({ comments }) {
         <div className="comments__input">
           <form className="comments__field">
             <section className="comments__field-txt">
-              <h2>JOIN THE CONVERSATION</h2>
+              <label>JOIN THE CONVERSATION</label>
               <input
                 className="comments__textarea"
                 name="comment"

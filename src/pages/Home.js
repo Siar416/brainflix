@@ -1,11 +1,11 @@
 import React from "react";
 import { Component } from "react";
-import "./global.scss";
-import Hero from "./components/Hero/Hero";
-import About from "./components/About/About";
-import Comments from "./components/Comments/Comments";
-import CommentsList from "./components/CommentsList/CommentsList";
-import VideosArray from "./components/VideosArray/VideosArray";
+import "../global.scss";
+import Hero from "../components/Hero/Hero";
+import About from "../components/About/About";
+import Comments from "../components/Comments/Comments";
+import CommentsList from "../components/CommentsList/CommentsList";
+import VideosArray from "../components/VideosArray/VideosArray";
 import axios from "axios";
 
 const url = "https://project-2-api.herokuapp.com/videos/";
@@ -38,7 +38,6 @@ class Home extends Component {
   componentDidUpdate(prevProps) {
     const { id } = this.props.match.params;
     if (prevProps.match.params.id && id !== prevProps.match.params.id) {
-      console.log("3nd");
       axios
         .get(`${url}${this.props.match.params.id}${apiKey}`)
         .then((response) => {

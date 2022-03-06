@@ -24,3 +24,11 @@
     padding: 2.25rem 2.25rem 0;
   }
 }
+
+// styling for desktop
+@include desktop-screen {
+  .videos__container {
+    padding: 2.25rem 0 2.25rem 2.25rem;
+    margin-right: 11.25rem;
+  }
+}

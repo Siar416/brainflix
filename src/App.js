@@ -1,9 +1,9 @@
 import React from "react";
 import "./global.scss";
 import PageHeader from "./components/PageHeader/PageHeader";
-import Home from "./Home";
+import Home from "./pages/Home";
 
-import VideoUploadPage from "./components/VideoUploadPage/VideoUploadPage";
+import VideoUploadPage from "./pages/VideoUploadPage/VideoUploadPage";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 
 function App() {

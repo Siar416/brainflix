@@ -40,11 +40,10 @@ class Home extends Component {
       .catch((err) => console.log(`${err} Unable to load data`));
   }
 
-  componentDidUpdate(prevProps, prevState) {
-    // const { id } = this.props.match.params;
+  componentDidUpdate(prevProps) {
     const videoId = this.props.match.params.id || this.state.allVideos[0].id;
 
-    if (prevState.currentVideo && prevState.currentVideo.id !== videoId) {
+    if (prevProps.match.params.id !== videoId) {
       axios
         .get(`${url}${videoId}${apiKey}`)
         .then((response) => {

@@ -11,7 +11,7 @@ import axios from "axios";
 // const url = "https://project-2-api.herokuapp.com/videos/";
 
 const url = "http://localhost:8000/videos/";
-const apiKey = "?api_key=5cb12036-b84f-409c-97eb-5a1b902a3b34";
+// const apiKey = "?api_key=5cb12036-b84f-409c-97eb-5a1b902a3b34";
 
 class Home extends Component {
   state = {
@@ -61,8 +61,10 @@ class Home extends Component {
 
     if (prevProps.match.params.id !== videoId) {
       axios
-        .get(`${url}${videoId}${apiKey}`)
+        // .get(`${url}${videoId}${apiKey}`)
+        .get(`${url}${videoId}`)
         .then((response) => {
+          // console.log('did this run')
           this.setState({
             currentVideo: response.data,
             comments: response.data.comments,

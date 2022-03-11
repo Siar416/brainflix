@@ -21,12 +21,17 @@ class Home extends Component {
   };
 
   componentDidMount() {
-    axios.get(url).then((response) => {
-      // console.log(response.data);
-      this.setState({
-        allVideos: response.data,
+    axios
+      .get(url)
+      .then((response) => {
+        // console.log(response.data);
+        this.setState({
+          allVideos: response.data,
+        });
+      })
+      .catch((err) => {
+        console.log(`${err} unable to load data`);
       });
-    });
   }
 
   // componentDidMount() {

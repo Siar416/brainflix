@@ -8,7 +8,9 @@ import CommentsList from "../components/CommentsList/CommentsList";
 import VideosArray from "../components/VideosArray/VideosArray";
 import axios from "axios";
 
-const url = "https://project-2-api.herokuapp.com/videos/";
+// const url = "https://project-2-api.herokuapp.com/videos/";
+
+const url = "http://localhost:8000/videos/";
 const apiKey = "?api_key=5cb12036-b84f-409c-97eb-5a1b902a3b34";
 
 class Home extends Component {
@@ -19,26 +21,35 @@ class Home extends Component {
   };
 
   componentDidMount() {
-    axios
-      .get(url + apiKey)
-      .then((response) => {
-        console.log(response);
-        this.setState({
-          allVideos: response.data,
-        });
-
-        const videoId =
-          this.props.match.params.id || this.state.allVideos[0].id;
-
-        axios.get(`${url}${videoId}${apiKey}`).then((response) => {
-          this.setState({
-            comments: response.data.comments,
-            currentVideo: response.data,
-          });
-        });
-      })
-      .catch((err) => console.log(`${err} Unable to load data`));
+    axios.get(url).then((response) => {
+      // console.log(response.data);
+      this.setState({
+        allVideos: response.data,
+      });
+    });
   }
+
+  // componentDidMount() {
+  //   axios
+  //     .get(url + apiKey)
+  //     .then((response) => {
+  //       console.log(response);
+  //       this.setState({
+  //         allVideos: response.data,
+  //       });
+
+  //       const videoId =
+  //         this.props.match.params.id || this.state.allVideos[0].id;
+
+  //       axios.get(`${url}${videoId}${apiKey}`).then((response) => {
+  //         this.setState({
+  //           comments: response.data.comments,
+  //           currentVideo: response.data,
+  //         });
+  //       });
+  //     })
+  //     .catch((err) => console.log(`${err} Unable to load data`));
+  // }
 
   componentDidUpdate(prevProps) {
     const videoId = this.props.match.params.id || this.state.allVideos[0].id;

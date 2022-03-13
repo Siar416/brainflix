@@ -1,7 +1,7 @@
 import videoThumbnail from "../../assets/images/Upload-video-preview.jpg";
 import publishIcon from "../../assets/icons/publish.svg";
 import "./VideoUploadPage.scss";
-import { Redirect } from "react-router-dom";
+import { Redirect, Link } from "react-router-dom";
 import { Component } from "react";
 import axios from "axios";
 const url = "http://localhost:8000/videos/";
@@ -30,6 +30,11 @@ class VideoUploadPage extends Component {
       alert("Unable to upload video, form not completed");
     }
   };
+
+  // cancelBtn = () => {
+  //   console.log("cancel clicked");
+  //   return <Link to="/" />;
+  // };
 
   render() {
     if (this.state.isSubmitted) {
@@ -79,7 +84,9 @@ class VideoUploadPage extends Component {
                   />
                   PUBLISH
                 </button>
-                <button className="uploads__button-cancel">CANCEL</button>
+                <button className="uploads__button-cancel">
+                  <Link to="/">CANCEL</Link>
+                </button>
               </div>
             </>
           </form>

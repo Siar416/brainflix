@@ -41,7 +41,7 @@ class VideoUploadPage extends Component {
         <section className="uploads__wrapper">
           <h1 className="uploads__title">Upload Video</h1>
           <form className="form" onSubmit={this.uploadBtn}>
-            <section className="test-1">
+            <section className="form__wrapper">
               <section className="form__thumbnail">
                 <h2 className="form__thumbnail__title">VIDEO THUMBNAIL</h2>
                 <img
@@ -69,7 +69,7 @@ class VideoUploadPage extends Component {
                 />
               </section>
             </section>
-            <div className="test">
+            <>
               <div className="uploads__button">
                 <button className="uploads__button-publish">
                   <img
@@ -82,7 +82,7 @@ class VideoUploadPage extends Component {
 
                 <button className="uploads__button-cancel">CANCEL</button>
               </div>
-            </div>
+            </>
           </form>
         </section>
       </section>

@@ -6,7 +6,7 @@ function Video({ id, image, title, channel }) {
     <li>
       <Link to={`/videos/${id}`}>
         <section className="videos__item">
-          <img className="videos__item__img" src={image} />
+          <img className="videos__item__img" src={image} alt="poster" />
           <section className="videos__wrapper">
             <p className="videos__wrapper__title">{title}</p>
             <p className="videos__wrapper__channel">{channel}</p>

@@ -7,7 +7,7 @@ function Comments({ comments }) {
     <section className="comments">
       <h2 className="comments__header">{comments.length} Comments</h2>
       <div className="comments__form">
-        <img className="comments__img" src={avatar} alt="image of Mohan" />
+        <img className="comments__img" src={avatar} alt="avatar" />
         <div className="comments__input">
           <form className="comments__field">
             <section className="comments__field-txt">
@@ -28,7 +28,7 @@ function Comments({ comments }) {
                 <img
                   className="comments__btn-img"
                   src={plusSign}
-                  alt="image of plus sign"
+                  alt="add sign"
                 />
                 COMMENT
               </button>

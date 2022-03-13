@@ -8,7 +8,7 @@ function CommentsList({ comments }) {
         return (
           <div key={uuidv4()} className="comments__list">
             <div className="comments__wrapper">
-              <img className="comments__avatar" />
+              <img className="comments__avatar" alt="avatar" />
               <p className="comments__name">{comment.name}</p>
               <p className="comments__date">
                 {new Date(comment.timestamp).toLocaleDateString()}

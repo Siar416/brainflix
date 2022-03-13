@@ -47,7 +47,7 @@ class VideoUploadPage extends Component {
                 <img
                   className="form__thumbnail__image"
                   src={videoThumbnail}
-                  alt="image of person riding a bike"
+                  alt="person riding a bike"
                 />
               </section>
               <section className="form__section">

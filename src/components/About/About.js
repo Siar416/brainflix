@@ -16,19 +16,11 @@ function About({ currentVideo }) {
           </div>
           <div className="about__stats">
             <p className="about__views-txt">
-              <img
-                className="about__views-img"
-                src={views}
-                alt="image of views"
-              />
+              <img className="about__views-img" src={views} alt="views icon" />
               {currentVideo.views}
             </p>
             <p className="about__likes-txt">
-              <img
-                className="about__likes-img"
-                src={likes}
-                alt="image of heart"
-              />
+              <img className="about__likes-img" src={likes} alt="heart icon" />
               {currentVideo.likes}
             </p>
           </div>

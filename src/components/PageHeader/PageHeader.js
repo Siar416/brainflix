@@ -16,7 +16,7 @@ function PageHeader() {
             className="header__searchbar-img"
             src={search}
             type="image"
-            alt="image of search bar"
+            alt="search bar"
           />
           <input
             className="header__searchbar-bar"
@@ -32,7 +32,7 @@ function PageHeader() {
             <img
               className="header__btn-upload-img"
               src={upload}
-              alt="image of upload icon"
+              alt="upload icon"
             />
             UPLOAD
           </button>
